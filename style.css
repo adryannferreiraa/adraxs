@@ -41,3 +41,17 @@ color: darkblue;
 font-size: 14px;
 
 }
+form [type="submit"]{
+    display: block;
+    background-color: blue;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+p{color: aliceblue;}
+
+a{color: blue;
+text-decoration: none;
+margin-left: 10px;}
