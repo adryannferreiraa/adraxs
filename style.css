@@ -10,5 +10,13 @@ overflow: hidden;}
 .login{background-color: darkblue;
 width: 355px;
 height: 320px;
+padding: 35px;
 }
-.login form{}
+.login form{
+    display: flex;
+    flex-direction: column;
+}
+.login input{
+    margin-top: 10px;
+
+}
