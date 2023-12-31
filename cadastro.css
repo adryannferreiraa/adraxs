@@ -13,4 +13,26 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+}
+
+.container{
+
+    width: 80%;
+    height: 80vh;
+    display: flex;
+}
+
+.form-image {
+
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 1rem;
+}
+
+.form-image img{
+    width: 31rem;
 }
