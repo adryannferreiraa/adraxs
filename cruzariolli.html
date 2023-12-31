@@ -7,23 +7,31 @@
     <title> Cadastro</title>
 </head>
 <body>
+     
+
+   
+    <form>
+
+        <h3>Login</h3>
+        <input type="text" placeholder="Login" id="login">
+        <input type="password" placeholder="Senha" id="senha">
+        <input type="submit" onclick="logar(): return false">
+    </form>
+
+    <script>
+
+        function logar (){
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+            if(login=="admin" && senha == "admin"){
+                alert("sucesso");
+                location.href = "portal.html";
+              }else{
+                alert("Usuario ou senha incorretos");
+              }
+        }
+    </script>
   
-    <section class="area-login">
-        <div class="login">
-          <div> <img src="a.png"
-          </div>
-          <form method="POST">
-            <input type="text" name="nome" placeholder="seu primeiro nome" autofocus>
-            <input type="text" name="sobrenome" placeholder="seu sobrenome">
-            <input type="email" name="email" placeholder="seu E-mail">
-            <input type="tel"name="Celular" placeholder="(xx) xxxx-xxxx">
-            <input type="text" name="password" placeholder="sua senha">
-            <input type="text" name="confirmpassword" placeholder="confirme sua senha">
-            <input type="submit" value= <a href="portal.html>">Entrar</a>
-          </form>
-          <p> Já tem uma conta?<a href="index.html"> Entrar</a></p>
-        </div>
-      </section>
       
 
     <link rel="stylesheet" href="cadastro.css">
