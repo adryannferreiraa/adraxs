@@ -3,7 +3,7 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-
+    color: #fff;
 }
 
 body{
@@ -36,3 +36,58 @@ body{
 .form-image img{
     width: 31rem;
 }
+
+.form {
+
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: #fff;
+padding: 3rem;
+}
+
+.form-header{
+
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.login-button{
+
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: darkblue;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover{
+    background-color: blue;
+}
+
+.login-button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after {
+    content: ' ';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: darkblue;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input
