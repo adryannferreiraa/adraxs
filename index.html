@@ -15,7 +15,7 @@
     <form method="POST">
       <input type="text" name="nome" placeholder="nome de usuario" autofocus>
       <input type="text" name="senha" placeholder="sua senha">
-      <input type="submit" value="entrar">
+      <input type="submit" value="entrar (); return false">
     </form>
     <p> Não tem uma conta?<a href="cruzariolli.html"> Criar conta</a></p>
   </div>
@@ -23,12 +23,13 @@
 
 <script>
 
-   function logar(){
+   function entrar(){
     var login =document.getElementById('nome de usuario').value;
     var senha =document.getElementById('sua senha').value;
 
     if(seu nome de usuario == "admin" && sua senha== "admin") {
       alert('sucesso');
+      location.href -"portal.html";
     }
    }
 
