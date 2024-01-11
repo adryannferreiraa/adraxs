@@ -52,7 +52,7 @@ aside {
 }
 
 .amigo {
-    background-color: #001f3f; /* Azul escuro */
+    background-color: darkblue;
     border: 1px solid #003366; /* Tom mais escuro de azul para borda */
     color: #fff;
     padding: 10px;
