@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Perfil - Meu Instagram</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meu Instagram</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Explorar</a></li>
+                    <li><a href="#">Notificações</a></li>
+                    <li class="active"><a href="#">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="profile">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="profile.jpg" alt="Imagem de Perfil">
+                </div>
+                <div class="profile-info">
+                    <h2>Nome do Usuário</h2>
+                    <p>100 seguidores</p>
+                    <p>50 posts</p>
+                    <button id="followBtn">Seguir</button>
+                </div>
+            </div>
+
+            <div id="user-posts">
+                <!-- Aqui serão carregadas as postagens do usuário dinamicamente usando JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Meu Instagram. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-storage.js"></script>
+    <script src="perfil.js"></script>
+    <link rel="stylesheet" href="per.css">
+</body>
+</html>
