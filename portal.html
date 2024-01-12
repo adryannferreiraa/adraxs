@@ -7,62 +7,42 @@
     <title>Portal Cruzariolli</title>
 </head>
 <body>
-    
-        <header>
-            <div class="container">
-                <h1>Seu Logo</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Política</a></li>
-                        <li><a href="#">Cultura</a></li>
-                        <li><a href="#">Esportes</a></li>
-                        <li><a href="#">Tecnologia</a></li>
-                    </ul>
-                    <div class="search">
-                        <input type="text" placeholder="Pesquisar...">
-                        <button type="button">Buscar</button>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    
-        <main class="container">
-            <section class="featured-news">
-                <!-- Notícia em destaque -->
-            </section>
-    
-            <section class="categories">
-                <h2>Categorias</h2>
-                <ul>
-                    <li><a href="#">Política</a></li>
-                    <li><a href="#">Economia</a></li>
-                    <li><a href="#">Cultura</a></li>
-                    <li><a href="#">Esportes</a></li>
-                    <li><a href="#">Tecnologia</a></li>
-                </ul>
-            </section>
-    
-            <section class="latest-news">
-                <!-- Notícias mais recentes -->
-                <article>
-                    <!-- Artigo notícia 1 -->
-                </article>
-                <article>
-                    <!-- Artigo notícia 2 -->
-                </article>
-                <!-- Mais artigos notícias... -->
-            </section>
-        </main>
-    
-        <footer>
-            <div class="container">
-                <p>&copy; 2024 Seu Site de Notícias. Todos os direitos reservados.</p>
-            </div>
-        </footer>
-    </body>
-    </html>
-    
+   
+   
+    <header>
+        <h1>Chat Sem Número</h1>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Entre com seu nome de usuário</h2>
+            <form id="loginForm">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <section id="chat" style="display: none;">
+            <!-- Área de conversa -->
+            <div id="messages"></div>
+            <form id="messageForm">
+                <input type="text" id="messageInput" name="message" placeholder="Digite sua mensagem..." required>
+                <button type="submit"><span>Flutuar</span></button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Vai Flutuar.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+      
  
       
       <link rel="stylesheet" href="portal.css">

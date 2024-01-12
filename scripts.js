@@ -1,38 +1,51 @@
-let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('loginForm');
+    const chatSection = document.getElementById('chat');
+    const messageForm = document.getElementById('messageForm');
+    const messageInput = document.getElementById('messageInput');
+    const messagesContainer = document.getElementById('messages');
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.featured-news article');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
-    }
-
-    slides.forEach((slide, i) => {
-        slide.style.display = i === currentSlide ? 'block' : 'none';
-    });
-}
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-function searchNews() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const articles = document.querySelectorAll('.latest-news article');
-
-    articles.forEach(article => {
-        const title = article.querySelector('h3').innerText.toLowerCase();
-        if (title.includes(searchTerm)) {
-            article.style.display = 'block';
-        } else {
-            article.style.display = 'none';
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        if (username.trim() !== '') {
+            // Usuário logado com sucesso
+            showChatSection(username);
         }
     });
-}
+
+    messageForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const message = messageInput.value;
+        if (message.trim() !== '') {
+            // Adiciona a mensagem ao container
+            addMessage(message);
+            // Limpa o campo de mensagem
+            messageInput.value = '';
+        }
+    });
+
+    function showChatSection(username) {
+        // Atualiza a interface para a seção de chat
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('chat').style.display = 'block';
+
+        // Bem-vindo ao usuário no chat
+        const welcomeMessage = document.createElement('div');
+        welcomeMessage.classList.add('system-message');
+        welcomeMessage.innerText = `Bem-vindo, ${username}!`;
+        messagesContainer.appendChild(welcomeMessage);
+    }
+
+    function addMessage(message) {
+        // Adiciona a mensagem ao container
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('user-message');
+        messageElement.innerText = message;
+        messagesContainer.appendChild(messageElement);
+
+        // Role até o final do container de mensagens
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+});
+
