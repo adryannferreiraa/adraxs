@@ -1,51 +1,101 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.getElementById('loginForm');
-    const chatSection = document.getElementById('chat');
-    const messageForm = document.getElementById('messageForm');
-    const messageInput = document.getElementById('messageInput');
-    const messagesContainer = document.getElementById('messages');
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
 
-    loginForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const username = document.getElementById('username').value;
-        if (username.trim() !== '') {
-            // Usuário logado com sucesso
-            showChatSection(username);
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const database = firebase.database();
+    const storage = firebase.storage();
+
+    const feedSection = document.getElementById('feed');
+    const uploadModal = document.getElementById('uploadModal');
+    const closeModalBtn = document.getElementById('closeModal');
+    const imageInput = document.getElementById('imageInput');
+    const captionInput = document.getElementById('captionInput');
+    const uploadForm = document.getElementById('uploadForm');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    let currentUser;
+
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            currentUser = user;
+            showFeed();
+        } else {
+            window.location.replace("login.html"); // Redireciona para a página de login
         }
     });
 
-    messageForm.addEventListener('submit', function (event) {
+    function showFeed() {
+        // Implemente a lógica para carregar as postagens do usuário do banco de dados aqui
+        // Use a função createPostElement(post) para criar elementos HTML para cada postagem
+    }
+
+    function createPostElement(post) {
+        const postElement = document.createElement('div');
+        postElement.classList.add('post');
+
+        const imgElement = document.createElement('img');
+        imgElement.src = post.imageUrl;
+        imgElement.alt = 'Imagem do post';
+
+        const postInfoElement = document.createElement('div');
+        postInfoElement.classList.add('post-info');
+
+        const usernameElement = document.createElement('h2');
+        usernameElement.innerText = post.username;
+
+        const captionElement = document.createElement('p');
+        captionElement.innerText = post.caption;
+
+        postInfoElement.appendChild(usernameElement);
+        postInfoElement.appendChild(captionElement);
+
+        postElement.appendChild(imgElement);
+        postElement.appendChild(postInfoElement);
+
+        feedSection.appendChild(postElement);
+    }
+
+    uploadForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        const message = messageInput.value;
-        if (message.trim() !== '') {
-            // Adiciona a mensagem ao container
-            addMessage(message);
-            // Limpa o campo de mensagem
-            messageInput.value = '';
+
+        const imageFile = imageInput.files[0];
+        const caption = captionInput.value;
+
+        if (imageFile && caption) {
+            uploadImage(imageFile, caption);
         }
     });
 
-    function showChatSection(username) {
-        // Atualiza a interface para a seção de chat
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('chat').style.display = 'block';
+    logoutBtn.addEventListener('click', function () {
+        auth.signOut().then(() => {
+            window.location.replace("login.html"); // Redireciona para a página de login
+        });
+    });
 
-        // Bem-vindo ao usuário no chat
-        const welcomeMessage = document.createElement('div');
-        welcomeMessage.classList.add('system-message');
-        welcomeMessage.innerText = `Bem-vindo, ${username}!`;
-        messagesContainer.appendChild(welcomeMessage);
+    function uploadImage(imageFile, caption) {
+        // Implemente a lógica para fazer upload da imagem para o Firebase Storage e salvar os detalhes no banco de dados
     }
 
-    function addMessage(message) {
-        // Adiciona a mensagem ao container
-        const messageElement = document.createElement('div');
-        messageElement.classList.add('user-message');
-        messageElement.innerText = message;
-        messagesContainer.appendChild(messageElement);
-
-        // Role até o final do container de mensagens
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    function openModal() {
+        uploadModal.style.display = 'block';
     }
+
+    function closeModal() {
+        uploadModal.style.display = 'none';
+    }
+
+    closeModalBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', function (event) {
+        if (event.target === uploadModal) {
+            closeModal();
+        }
+    });
 });
-

@@ -8,40 +8,53 @@
 </head>
 <body>
    
+
+        <header>
+            <div class="container">
+                <h1>Meu Instagram</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Explorar</a></li>
+                        <li><a href="#">Notificações</a></li>
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#" id="logoutBtn">Sair</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main class="container">
+            <!-- Área de postagens -->
+            <section id="feed">
+                <!-- Aqui serão carregadas as postagens dinamicamente usando JavaScript -->
+            </section>
+        </main>
+    
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Meu Instagram. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    
+        <div class="modal" id="uploadModal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <h2>Novo Post</h2>
+                <form id="uploadForm">
+                    <input type="file" accept="image/*" id="imageInput" required>
+                    <textarea placeholder="Legenda..." id="captionInput" required></textarea>
+                    <button type="submit">Publicar</button>
+                </form>
+            </div>
+        </div>
+    
+        <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-storage.js"></script>
+    
    
-    <header>
-        <h1>Chat Sem Número</h1>
-    </header>
-
-    <main>
-        <section id="login">
-            <h2>Entre com seu nome de usuário</h2>
-            <form id="loginForm">
-                <label for="username">Nome de Usuário:</label>
-                <input type="text" id="username" name="username" required>
-                <button type="submit">Entrar</button>
-            </form>
-        </section>
-
-        <section id="chat" style="display: none;">
-            <!-- Área de conversa -->
-            <div id="messages"></div>
-            <form id="messageForm">
-                <input type="text" id="messageInput" name="message" placeholder="Digite sua mensagem..." required>
-                <button type="submit"><span>Flutuar</span></button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; Vai Flutuar.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-
       
  
       
