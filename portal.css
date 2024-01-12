@@ -1,27 +1,29 @@
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
-    background-color: #001f3f; /* Azul escuro */
+    background-color: #333;
     color: #fff;
-    padding: 1rem;
-    text-align: center;
+    padding: 20px 0;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -31,39 +33,79 @@ nav a {
     font-weight: bold;
 }
 
+.search {
+    margin-left: auto;
+}
+
+.search input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search button {
+    background-color: #555;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 main {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+}
+
+.featured-news,
+.categories,
+.latest-news {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.featured-news {
+    background-color: #fff;
     padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.post {
-    background-color: #001f3f; /* Azul escuro */
-    border: 1px solid #003366; /* Tom mais escuro de azul para borda */
-    color: #fff;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-aside {
-    width: 25%;
+.categories {
+    background-color: #fff;
     padding: 20px;
-    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.amigo {
-    background-color: darkblue;
-    border: 1px solid #003366; /* Tom mais escuro de azul para borda */
-    color: #fff;
-    padding: 10px;
+.categories h2 {
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
+.categories ul {
+    list-style: none;
+}
+
+.categories a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.categories a:hover {
+    color: #555;
+}
+
+.latest-news article {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 footer {
-    background-color: #001f3f; /* Azul escuro */
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+}
