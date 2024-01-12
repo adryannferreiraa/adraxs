@@ -46,8 +46,7 @@ input, button {
 }
 
 button {
-    background-color: #001f3f;
-    color: #fff;
+    background-color: darkblue;
     cursor: pointer;
 }
 
