@@ -16,6 +16,7 @@
         h1 {
             font-size: 2em;
             margin-bottom: 20px;
+            color: red; /* Cor mais intensa para dar um toque de urgência */
         }
 
         .glitch {
@@ -59,13 +60,18 @@
             // Adicione um efeito sonoro de hacking
             var audio = new Audio('https://www.soundjay.com/misc/sounds/page-flip-1.mp3');
             audio.play();
+
+            // Exiba um alerta após alguns segundos
+            setTimeout(function() {
+                alert("Seu celular foi hackeado! Brincadeira, relaxe e aproveite o dia!");
+            }, 5000);
         });
     </script>
     <title>Hackeado</title>
 </head>
 <body>
-    <h1 class="animate">Site Hackeado</h1>
-    <p>Estamos enfrentando problemas técnicos de segurança. Por favor, aguarde...</p>
+    <h1 class="animate">Atenção! Seu Celular Está Sendo Hackeado</h1>
+    <p>Por favor, mantenha a calma enquanto resolvemos os problemas de segurança...</p>
     <p class="glitch animate" data-text="Ataque em Andamento...">Ataque em Andamento...</p>
 </body>
 </html>
