@@ -8,55 +8,33 @@
 </head>
 <body>
    
-
+   
         <header>
-            <div class="container">
-                <h1>Meu Instagram</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Explorar</a></li>
-                        <li><a href="#">Notificações</a></li>
-                        <li><a href="perfil.html">Perfil</a></li>
-                        <li><a href="#" id="logoutBtn">Sair</a></li>
-                    </ul>
-                </nav>
+            <div class="logo-container">
+                <img src="a.png" alt="Logo do Portal">
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <!-- Adicione outras categorias conforme necessário -->
+                </ul>
+            </nav>
         </header>
     
-        <main class="container">
-            <!-- Área de postagens -->
-            <section id="feed">
-                <!-- Aqui serão carregadas as postagens dinamicamente usando JavaScript -->
-            </section>
-        </main>
+        <section class="noticias">
+            <article>
+                <h2>Título da Notícia</h2>
+                <p>Conteúdo da notícia...</p>
+            </article>
+            <!-- Adicione mais artigos conforme necessário -->
+        </section>
     
         <footer>
-            <div class="container">
-                <p>&copy; 2024 Meu Instagram. Todos os direitos reservados.</p>
-            </div>
+            <p>&copy; 2024 Seu Portal de Notícias. Todos os direitos reservados.</p>
         </footer>
-    
-        <div class="modal" id="uploadModal">
-            <div class="modal-content">
-                <span class="close-btn" id="closeModal">&times;</span>
-                <h2>Novo Post</h2>
-                <form id="uploadForm">
-                    <input type="file" accept="image/*" id="imageInput" required>
-                    <textarea placeholder="Legenda..." id="captionInput" required></textarea>
-                    <button type="submit">Publicar</button>
-                </form>
-            </div>
-        </div>
-    
-        <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-storage.js"></script>
-    
    
-      
- 
       
       <link rel="stylesheet" href="portal.css">
       <script src="scripts.js"></script>
