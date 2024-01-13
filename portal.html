@@ -3,40 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="PORTAL__2_-removebg-preview-_1_.ico" type="image/x-icon">
-    <title>Portal Cruzariolli</title>
+    <style>
+        body {
+            background-color: black;
+            color: lime;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .glitch {
+            color: red;
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            color: blue;
+        }
+
+        .animate {
+            animation: glitch-animation 1s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-animation {
+            0% {
+                transform: translate(0);
+            }
+            25% {
+                transform: translate(-5px, 5px);
+            }
+            50% {
+                transform: translate(5px, -5px);
+            }
+            75% {
+                transform: translate(-5px, 5px);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Adicione um efeito sonoro de hacking
+            var audio = new Audio('https://www.soundjay.com/misc/sounds/page-flip-1.mp3');
+            audio.play();
+        });
+    </script>
+    <title>Hackeado</title>
 </head>
 <body>
-   
-   
-        <header>
-            <div class="logo-container">
-                <img src="#" alt="Logo do Portal">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Política</a></li>
-                    <li><a href="#">Economia</a></li>
-                    <!-- Adicione outras categorias conforme necessário -->
-                </ul>
-            </nav>
-        </header>
-    
-        <section class="noticias">
-            <article>
-                <h2>Título da Notícia</h2>
-                <p>Conteúdo da notícia...</p>
-            </article>
-            <!-- Adicione mais artigos conforme necessário -->
-        </section>
-    
-        <footer>
-            <p>&copy; 2024 Seu Portal de Notícias. Todos os direitos reservados.</p>
-        </footer>
-   
-      
-      <link rel="stylesheet" href="portal.css">
-      <script src="scripts.js"></script>
+    <h1 class="animate">Site Hackeado</h1>
+    <p>Estamos enfrentando problemas técnicos de segurança. Por favor, aguarde...</p>
+    <p class="glitch animate" data-text="Ataque em Andamento...">Ataque em Andamento...</p>
 </body>
 </html>
