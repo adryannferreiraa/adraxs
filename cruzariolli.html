@@ -13,6 +13,7 @@
             background-color: #000000;
             margin: 0;
             padding: 0;
+            color: #fff; /* Adicionado texto branco */
         }
 
         .area-cadastro {
@@ -30,6 +31,12 @@
             background-color: #000000;
             max-width: 400px;
             width: 100%;
+        }
+
+        .cadastro img {
+            width: 150px; /* Ajuste o tamanho conforme necessário */
+            border-radius: 50%; /* Torna a imagem circular */
+            margin-bottom: 20px; /* Espaçamento inferior adicionado */
         }
 
         form {
@@ -73,6 +80,7 @@
 <body>
     <section class="area-cadastro">
         <div class="cadastro">
+            <div><img src="a.png" alt="Logo"></div>
             <form method="POST" onsubmit="cadastrar(); return false">
                 <input type="text" placeholder="Login" id="novologin" required>
                 <input type="password" placeholder="Senha" id="novasenha" required>
@@ -105,4 +113,5 @@
     }
 </script>
 </html>
+
 
