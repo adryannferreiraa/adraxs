@@ -1,10 +1,13 @@
+Aqui está o código HTML completo com as funcionalidades de edição e exclusão dos posts:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="PORTAL__2_-removebg-preview-_1_.ico" type="image/x-icon">
-    <title>Adraxs</title>
+    <title>Adraxs - Página Principal</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -92,12 +95,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
-        @media screen and (max-width: 600px) {
-            .post {
-                padding: 10px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -121,15 +118,19 @@
                 var feedContainer = document.getElementById("feed");
                 feedContainer.innerHTML = "";
 
-                posts.forEach(function(post) {
+                posts.forEach(function(post, index) {
                     var postElement = document.createElement("div");
                     postElement.className = "post";
 
                     var interacoesElement = document.createElement("div");
                     interacoesElement.className = "interacoes";
                     interacoesElement.innerHTML = `
-                        <span class="interacao" onclick="curtir(${post.likes})">Curtir</span>
+                        <span class="interacao" onclick="curtir(${index}, ${post.likes})">Curtir</span>
                         <span class="likes">${post.likes} Likes</span>
+                        ${post.usuario === nomeDeLogin ? `
+                            <button onclick="editarPost(${index})">Editar</button>
+                            <button onclick="excluirPost(${index})">Excluir</button>
+                        ` : ''}
                     `;
 
                     postElement.innerHTML = `
@@ -159,8 +160,26 @@
                 exibirPosts();
             }
 
-            function curtir(likes) {
+            function curtir(index, likes) {
                 alert('Você curtiu este post!'); // Implemente a lógica de curtir conforme desejado
+            }
+
+            function editarPost(index) {
+                var novoTexto = prompt('Digite o novo texto para o post:');
+                if (novoTexto !== null) {
+                    posts[index].mensagem = novoTexto;
+                    localStorage.setItem('posts', JSON.stringify(posts));
+                    exibirPosts();
+                }
+            }
+
+            function excluirPost(index) {
+                var confirmacao = confirm('Deseja realmente excluir este post?');
+                if (confirmacao) {
+                    posts.splice(index, 1);
+                    localStorage.setItem('posts', JSON.stringify(posts));
+                    exibirPosts();
+                }
             }
 
             window.onload = exibirPosts;
@@ -168,3 +187,6 @@
     </div>
 </body>
 </html>
+```
+
+Este código agora inclui os botões "Editar" e "Excluir" para cada post, permitindo que os usuários editem e excluam seus próprios posts.
