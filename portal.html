@@ -4,24 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="PORTAL__2_-removebg-preview-_1_.ico" type="image/x-icon">
-    <title>Adras - A Nova Rede Social</title>
-    <link rel="stylesheet" href="style.css"> <!-- Certifique-se de incluir seu arquivo de estilo original -->
+    <title>Adraxs - Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
 
-    <header>
-        <h1>Adraxs</h1>
-        <nav>
-            <input type="text" id="messageInput" placeholder="Digite sua mensagem">
-            <button onclick="postarMensagem()">Postar</button>
-        </nav>
-    </header>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    <main id="mensagemContainer">
-        <!-- As mensagens dos usuários serão exibidas aqui -->
-    </main>
+        .post {
+            background-color: #333;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
 
-    <script src="scripts.js"></script>
-</body>
-</html>
+        .usuario {
+            font-weight: bold;
+            color: #8e44ad;
+        }
 
+        .mensagem {
+            margin-top: 10px;
+        }
+
+        .interacoes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .interacao {
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .likes {
+            color: #3498db;
+        }
+
+        .comentarios {
+            margin-top: 20px;
+        }
+
+        .comentario {
+            background-color: #444;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .post {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="post">
+            <p class="usuario">Usuário1</p>
+            <p class="mensagem">Bem-vindo ao Adraxs! Este é um exemplo de uma mensagem mais longa para testar a responsividade.</p>
+            <div class="interacoes">
+                <span class="interacao" onclick="curtir(this)">Curtir</span>
+                <span class="likes">10 Likes</span>
+            </div>
+            <div class="comentarios">
+                <div class="comentario">
+                    <p class="usuario">Usuário2</p>
+                    <p class="mensagem">Ótimo post!</p>
+                </div>
+                <div class="comentario">
+                    <p class="usuario">Usuário3</p>
+                    <p class="mensagem">Gostei também!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <p class="usuario">Usuário2</p>
+            <p class="mensagem">Que dia incrível! #Feliz</p>
+            <div class="interacoes">
+                <span class="interacao" onclick="curtir(this)">Curtir</span>
+                <span class="likes">5 Likes</span>
+            </div>
+            <div class="comentarios">
+                <div class="comentario">
+                    <p class="usuario">Usuário1</p>
+                    <p class="mensagem">Realmente foi um dia incrível!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function curtir(element) {
+            var likesElement = element.nextElementSibling;
+            var currentLikes = parseInt(likesElement.textContent.split(" ")[0]);
+
+            likesElement.textContent = (currentLikes + 1) + " Likes";
+        }
+    </script>
 </body>
 </html>
