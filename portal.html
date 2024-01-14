@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="PORTAL__2_-removebg-preview-_1_.ico" type="image/x-icon">
-    <title>Adraxs - Página Principal</title>
+    <title>Adraxs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,8 +17,8 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: #1e272e; /* Cor de fundo */
-            color: #fff; /* Cor do texto */
+            background-color: #1e272e;
+            color: #fff;
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
@@ -59,7 +59,7 @@
         }
 
         .likes {
-            color: #3498db;
+            color: #8e44addb;
         }
 
         .comentarios {
@@ -71,6 +71,27 @@
             padding: 10px;
             margin-top: 10px;
             border-radius: 5px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form input[type="text"],
+        form textarea,
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            background-color: #8e44ad;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
         @media screen and (max-width: 600px) {
@@ -86,49 +107,94 @@
     </header>
 
     <div class="container">
-        <div class="post">
-            <p class="usuario">Usuário1</p>
-            <p class="mensagem">Bem-vindo ao Adraxs! Este é um exemplo de uma mensagem mais longa para testar a responsividade.</p>
-            <div class="interacoes">
-                <span class="interacao" onclick="curtir(this)">Curtir</span>
-                <span class="likes">10 Likes</span>
-            </div>
-            <div class="comentarios">
-                <div class="comentario">
-                    <p class="usuario">Usuário2</p>
-                    <p class="mensagem">Ótimo post!</p>
-                </div>
-                <div class="comentario">
-                    <p class="usuario">Usuário3</p>
-                    <p class="mensagem">Gostei também!</p>
-                </div>
-            </div>
-        </div>
+        <form method="POST" onsubmit="postarUsuario(); return false">
+            <input type="text" placeholder="Seu nome de login" id="loginUsuario" required>
+            <textarea placeholder="O que você está pensando?" id="mensagemUsuario" required></textarea>
+            <input type="submit" value="Postar">
+        </form>
 
-        <div class="post">
-            <p class="usuario">Usuário2</p>
-            <p class="mensagem">Que dia incrível! #Feliz</p>
-            <div class="interacoes">
-                <span class="interacao" onclick="curtir(this)">Curtir</span>
-                <span class="likes">5 Likes</span>
-            </div>
-            <div class="comentarios">
-                <div class="comentario">
-                    <p class="usuario">Usuário1</p>
-                    <p class="mensagem">Realmente foi um dia incrível!</p>
-                </div>
-            </div>
-        </div>
+        <!-- Seu conteúdo anterior permanece inalterado -->
+
+        <script>
+            // Simulação de usuários e posts para testes
+            var usuarios = [
+                { nome: "Usuario1", id: 1 },
+                { nome: "Usuario2", id: 2 },
+                { nome: "Usuario3", id: 3 },
+            ];
+
+            var posts = [
+                { usuarioId: 1, mensagem: "Bem-vindo ao Adraxs!", likes: 10 },
+                { usuarioId: 2, mensagem: "Que dia incrível!", likes: 5 },
+                { usuarioId: 3, mensagem: "Compartilhando momentos", likes: 8 },
+            ];
+
+            function exibirPosts() {
+                var feedContainer = document.getElementById("feed");
+                feedContainer.innerHTML = "";
+
+                posts.forEach(function(post) {
+                    var postElement = document.createElement("div");
+                    postElement.className = "post";
+
+                    var usuario = usuarios.find(function(u) {
+                        return u.id === post.usuarioId;
+                    });
+
+                    var interacoesElement = document.createElement("div");
+                    interacoesElement.className = "interacoes";
+                    interacoesElement.innerHTML = `
+                        <span class="interacao" onclick="curtir(${post.usuarioId}, ${post.likes})">Curtir</span>
+                        <span class="likes">${post.likes} Likes</span>
+                    `;
+
+                    postElement.innerHTML = `
+                        <p class="usuario">${usuario.nome}</p>
+                        <p class="mensagem">${post.mensagem}</p>
+                    `;
+
+                    postElement.appendChild(interacoesElement);
+                    feedContainer.appendChild(postElement);
+                });
+            }
+
+            function postarUsuario() {
+                var loginUsuario = document.getElementById('loginUsuario').value;
+                var mensagemUsuario = document.getElementById('mensagemUsuario').value;
+
+                var usuario = usuarios.find(function(u) {
+                    return u.nome === loginUsuario;
+                });
+
+                if (usuario) {
+                    var novoPost = {
+                        usuarioId: usuario.id,
+                        mensagem: mensagemUsuario,
+                        likes: 0,
+                    };
+
+                    posts.unshift(novoPost);
+                    exibirPosts();
+                } else {
+                    alert('Usuário não encontrado. Por favor, faça login antes de postar.');
+                }
+            }
+
+            function curtir(usuarioId, likes) {
+                var postIndex = posts.findIndex(function(post) {
+                    return post.usuarioId === usuarioId;
+                });
+
+                if (postIndex !== -1) {
+                    posts[postIndex].likes = likes + 1;
+                    exibirPosts();
+                }
+            }
+
+            window.onload = exibirPosts;
+        </script>
     </div>
-
-    <script>
-        function curtir(element) {
-            var likesElement = element.nextElementSibling;
-            var currentLikes = parseInt(likesElement.textContent.split(" ")[0]);
-
-            likesElement.textContent = (currentLikes + 1) + " Likes";
-        }
-    </script>
 </body>
 </html>
+
 
