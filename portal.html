@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="PORTAL__2_-removebg-preview-_1_.ico" type="image/x-icon">
-    <title>Adraxs - Página Principal</title>
+    <title>Adraxs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -114,7 +114,7 @@
         <div id="feed"></div>
 
         <script>
-            var posts = [];
+            var posts = JSON.parse(localStorage.getItem('posts')) || [];
             var nomeDeLogin = localStorage.getItem('nomeDeLogin');
 
             function exibirPosts() {
@@ -152,6 +152,10 @@
                 };
 
                 posts.unshift(novoPost);
+
+                // Salvar os posts no localStorage
+                localStorage.setItem('posts', JSON.stringify(posts));
+
                 exibirPosts();
             }
 
