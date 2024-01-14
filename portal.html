@@ -59,7 +59,7 @@
         }
 
         .likes {
-            color: #8e44addb;
+            color: #3498db;
         }
 
         .comentarios {
@@ -113,7 +113,7 @@
             <input type="submit" value="Postar">
         </form>
 
-        <!-- Seu conteúdo anterior permanece inalterado -->
+        <div id="feed"></div>
 
         <script>
             // Simulação de usuários e posts para testes
@@ -162,13 +162,13 @@
                 var loginUsuario = document.getElementById('loginUsuario').value;
                 var mensagemUsuario = document.getElementById('mensagemUsuario').value;
 
-                var usuario = usuarios.find(function(u) {
+                var usuarioIndex = usuarios.findIndex(function(u) {
                     return u.nome === loginUsuario;
                 });
 
-                if (usuario) {
+                if (usuarioIndex !== -1) {
                     var novoPost = {
-                        usuarioId: usuario.id,
+                        usuarioId: usuarios[usuarioIndex].id,
                         mensagem: mensagemUsuario,
                         likes: 0,
                     };
@@ -196,5 +196,4 @@
     </div>
 </body>
 </html>
-
 
