@@ -91,24 +91,28 @@
             <p>Não tem uma conta? <a href="cruzariolli.html">Criar conta</a></p>
         </div>
     </section>
-</body>
-<script>
-    function logar() {
-        var login = document.getElementById('login').value;
-        var senha = document.getElementById('senha').value;
+    <script>
+        function logar() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
 
-        var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+            var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-        var usuarioEncontrado = usuariosCadastrados.find(function(usuario) {
-            return usuario.login === login && usuario.senha === senha;
-        });
+            var usuarioEncontrado = usuariosCadastrados.find(function(usuario) {
+                return usuario.login === login && usuario.senha === senha;
+            });
 
-        if (usuarioEncontrado) {
-            alert('Login bem-sucedido');
-            location.href = "portal.html";
-        } else {
-            alert('Usuário ou senha incorretos');
+            if (usuarioEncontrado) {
+                alert('Login bem-sucedido');
+
+                // Armazenar o nome de login no localStorage
+                localStorage.setItem('nomeDeLogin', login);
+
+                location.href = "portal.html";
+            } else {
+                alert('Usuário ou senha incorretos');
+            }
         }
-    }
-</script>
+    </script>
+</body>
 </html>
