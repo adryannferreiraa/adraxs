@@ -197,20 +197,6 @@
 
                     postElement.appendChild(interacoesElement);
                     feedContainer.appendChild(postElement);
-
-                    // Adiciona a seção de comentários
-                    postElement.innerHTML += `
-                        <div class="comentarios">
-                            <form onsubmit="comentar(${index}); return false">
-                                <textarea placeholder="Comente aqui..." required></textarea>
-                                <input type="submit" value="Comentar">
-                            </form>
-                            <div id="comentarios-${index}"></div>
-                        </div>
-                    `;
-
-                    // Adiciona os comentários
-                    exibirComentarios(index);
                 });
             }
 
@@ -221,7 +207,6 @@
                     usuario: nomeDeLogin || "Convidado",
                     mensagem: mensagem,
                     likes: 0,
-                    comentarios: [],
                 };
 
                 posts.unshift(novoPost);
@@ -253,68 +238,6 @@
                     posts.splice(index, 1);
                     localStorage.setItem('posts', JSON.stringify(posts));
                     exibirPosts();
-                }
-            }
-
-            function comentar(index) {
-                var comentario = document.getElementById(`comentarios-${index}`).getElementsByTagName('textarea')[0].value;
-                if (comentario.trim() !== "") {
-                    posts[index].comentarios.push({ usuario: nomeDeLogin || "Convidado", mensagem: comentario, likes: 0 });
-                    localStorage.setItem('posts', JSON.stringify(posts));
-                    exibirComentarios(index);
-                }
-            }
-
-            function exibirComentarios(postIndex) {
-                var comentariosContainer = document.getElementById(`comentarios-${postIndex}`);
-                comentariosContainer.innerHTML = "";
-
-                posts[postIndex].comentarios.forEach(function(comentario, comentarioIndex) {
-                    var comentarioElement = document.createElement("div");
-                    comentarioElement.className = "comentario";
-
-                    var comentarioOptionsElement = document.createElement("div");
-                    comentarioOptionsElement.className = "comentario-options";
-                    comentarioOptionsElement.innerHTML = `
-                        ${comentario.usuario === nomeDeLogin ? `<button onclick="editarComentario(${postIndex}, ${comentarioIndex})">Editar</button>` : ''}
-                        ${comentario.usuario === nomeDeLogin ? `<button onclick="excluirComentario(${postIndex}, ${comentarioIndex})">Excluir</button>` : ''}
-                    `;
-
-                    comentarioElement.innerHTML = `
-                        <p class="usuario">${comentario.usuario}</p>
-                        <p class="mensagem">${comentario.mensagem}</p>
-                        <span class="interacao" onclick="curtirComentario(${postIndex}, ${comentarioIndex}, ${comentario.likes})">Curtir</span>
-                        <span class="likes">${comentario.likes} Likes</span>
-                    `;
-
-                    comentarioElement.appendChild(comentarioOptionsElement);
-                    comentariosContainer.appendChild(comentarioElement);
-                });
-            }
-
-            function curtirComentario(postIndex, comentarioIndex, likes) {
-                posts[postIndex].comentarios[comentarioIndex].likes++;
-                localStorage.setItem('posts', JSON.stringify(posts));
-                exibirComentarios(postIndex);
-            }
-
-            function editarComentario(postIndex, comentarioIndex) {
-                var novaMensagem = prompt("Digite a nova mensagem:");
-
-                if (novaMensagem !== null) {
-                    posts[postIndex].comentarios[comentarioIndex].mensagem = novaMensagem;
-                    localStorage.setItem('posts', JSON.stringify(posts));
-                    exibirComentarios(postIndex);
-                }
-            }
-
-            function excluirComentario(postIndex, comentarioIndex) {
-                var confirmacao = confirm("Tem certeza que deseja excluir este comentário?");
-
-                if (confirmacao) {
-                    posts[postIndex].comentarios.splice(comentarioIndex, 1);
-                    localStorage.setItem('posts', JSON.stringify(posts));
-                    exibirComentarios(postIndex);
                 }
             }
 
