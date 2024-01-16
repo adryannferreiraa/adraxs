@@ -6,6 +6,167 @@
     <link rel="shortcut icon" href="PORTAL__2_-removebg-preview-_1_.ico" type="image/x-icon">
     <link rel="stylesheet" href="portal.css">
     <title>Adraxs</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4b006b;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post {
+    background-color: #333;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.usuario {
+    font-weight: bold;
+    color: #8e44ad;
+}
+
+.mensagem {
+    margin-top: 10px;
+}
+
+.interacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.interacao {
+    cursor: pointer;
+    color: #fff;
+}
+
+.likes {
+    color: #3498db;
+}
+
+.post-options {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.post:hover .post-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-options button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    text-align: left;
+}
+
+.post-options button:hover {
+    background-color: #555;
+}
+
+.comentarios {
+    margin-top: 20px;
+}
+
+.comentario {
+    background-color: #444;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.comentario-options {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.comentario:hover .comentario-options {
+    display: flex;
+}
+
+.comentario-options button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 2px;
+    text-align: left;
+    margin-right: 5px;
+}
+
+.comentario-options button:hover {
+    background-color: #555;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form textarea,
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #4b006b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-input {
+            display: none;
+        }
+
+        .file-label {
+            background-color: #4b006b;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
     <script type="module">
@@ -38,6 +199,8 @@
     <div class="container">
         <form method="POST" onsubmit="postar(); return false">
             <textarea placeholder="O que você está pensando?" id="mensagem" required></textarea>
+            <label for="file" class="file-label">Adicionar Imagem/Vídeo</label>
+            <input type="file" id="file" class="file-input" accept="image/*, video/*">
             <input type="submit" value="Postar">
         </form>
 
@@ -78,11 +241,14 @@
 
             function postar() {
                 var mensagem = document.getElementById('mensagem').value;
+                var fileInput = document.getElementById('file');
+                var file = fileInput.files[0];
 
                 var novoPost = {
                     usuario: nomeDeLogin || "Convidado",
                     mensagem: mensagem,
                     likes: 0,
+                    file: file ? URL.createObjectURL(file) : null,
                 };
 
                 posts.unshift(novoPost);
