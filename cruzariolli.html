@@ -84,34 +84,49 @@
             <form method="POST" onsubmit="cadastrar(); return false">
                 <input type="text" placeholder="Login" id="novologin" required>
                 <input type="password" placeholder="Senha" id="novasenha" required>
-                <!-- Adicione mais campos conforme necessário -->
+                <input type="file" id="fotoperfil" accept="image/*" onchange="previewFoto()">
+                <div id="preview"></div>
                 <input type="submit" value="Cadastrar">
             </form>
         </div>
     </section>
+
+    <script>
+        function cadastrar() {
+            // Recupera os usuários cadastrados do localStorage
+            var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+            // Obtém os dados do formulário
+            var novoUsuario = {
+                login: document.getElementById('novologin').value,
+                senha: document.getElementById('novasenha').value,
+                fotoPerfil: document.getElementById('preview').innerHTML, // Adiciona a foto de perfil ao objeto
+            };
+
+            // Adiciona o novo usuário à lista
+            usuariosCadastrados.push(novoUsuario);
+
+            // Salva a lista atualizada de usuários no localStorage
+            localStorage.setItem('usuarios', JSON.stringify(usuariosCadastrados));
+
+            alert('Cadastro realizado com sucesso!');
+            // Redireciona para a página de login ou faça qualquer ação necessária
+        }
+
+        function previewFoto() {
+            var inputFoto = document.getElementById('fotoperfil');
+            var previewDiv = document.getElementById('preview');
+
+            if (inputFoto.files && inputFoto.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    previewDiv.innerHTML = '<img src="' + e.target.result + '" alt="Foto de Perfil">';
+                };
+
+                reader.readAsDataURL(inputFoto.files[0]);
+            }
+        }
+    </script>
 </body>
-<script>
-    function cadastrar() {
-        // Recupera os usuários cadastrados do localStorage
-        var usuariosCadastrados = JSON.parse(localStorage.getItem('usuarios')) || [];
-
-        // Obtém os dados do formulário
-        var novoUsuario = {
-            login: document.getElementById('novologin').value,
-            senha: document.getElementById('novasenha').value,
-            // Adicione mais campos conforme necessário
-        };
-
-        // Adiciona o novo usuário à lista
-        usuariosCadastrados.push(novoUsuario);
-
-        // Salva a lista atualizada de usuários no localStorage
-        localStorage.setItem('usuarios', JSON.stringify(usuariosCadastrados));
-
-        alert('Cadastro realizado com sucesso!');
-        // Redireciona para a página de login ou faça qualquer ação necessária
-    }
-</script>
 </html>
-
-
