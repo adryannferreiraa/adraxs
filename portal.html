@@ -15,6 +15,11 @@
     padding: 0;
 }
 
+    .header-image {
+            width: 100%;
+            height: auto;
+        }
+
 header {
     text-align: center;
     padding: 20px;
@@ -165,35 +170,12 @@ form input[type="submit"] {
             border-radius: 5px;
             cursor: pointer;
         }
-
     </style>
 </head>
 <body>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyDXGXfhcgvOGqKMab7PEoLJnDPxsiJMEtY",
-          authDomain: "adraxs-e03ca.firebaseapp.com",
-          projectId: "adraxs-e03ca",
-          storageBucket: "adraxs-e03ca.appspot.com",
-          messagingSenderId: "1053072141905",
-          appId: "1:1053072141905:web:9996ed3d3b94a6e0b79270",
-          measurementId: "G-LE48TKH3CC"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
+
     <header>
-        Adraxs
+        <img src="adraxs.png" class="header-image">
     </header>
 
     <div class="container">
@@ -233,6 +215,14 @@ form input[type="submit"] {
                         <p class="usuario">${post.usuario}</p>
                         <p class="mensagem">${post.mensagem}</p>
                     `;
+
+                    if (post.file) {
+                        var mediaElement = document.createElement("img");
+                        mediaElement.src = post.file;
+                        mediaElement.style.maxWidth = "100%";
+                        mediaElement.style.height = "auto";
+                        postElement.appendChild(mediaElement);
+                    }
 
                     postElement.appendChild(interacoesElement);
                     feedContainer.appendChild(postElement);
@@ -283,17 +273,8 @@ form input[type="submit"] {
                 }
             }
 
-            if (post.file) {
-                        var mediaElement = document.createElement("img");
-                        mediaElement.src = post.file;
-                        mediaElement.style.maxWidth = "100%";
-                        mediaElement.style.height = "auto";
-                        postElement.appendChild(mediaElement);
-                    }
-
             window.onload = exibirPosts;
         </script>
     </div>
 </body>
 </html>
-
