@@ -198,8 +198,6 @@ form input[type="submit"] {
 
     <div class="container">
         <form method="POST" onsubmit="postar(); return false">
-            <label for="fotoPerfil" class="file-label">Adicionar Foto de Perfil</label>
-            <input type="file" id="fotoPerfil" class="file-input" accept="image/*" onchange="previewFotoPerfil()">
             <textarea placeholder="O que você está pensando?" id="mensagem" required></textarea>
             <label for="file" class="file-label">Adicionar Imagem/Vídeo</label>
             <input type="file" id="file" class="file-input" accept="image/*, video/*">
@@ -211,7 +209,6 @@ form input[type="submit"] {
         <script>
             var posts = JSON.parse(localStorage.getItem('posts')) || [];
             var nomeDeLogin = localStorage.getItem('nomeDeLogin');
-            var fotoPerfil = localStorage.getItem('fotoPerfil');
 
             function exibirPosts() {
                 var feedContainer = document.getElementById("feed");
@@ -233,37 +230,14 @@ form input[type="submit"] {
                     `;
 
                     postElement.innerHTML = `
-                        <img src="${fotoPerfil}" alt="Foto de Perfil" class="foto-perfil">
                         <p class="usuario">${post.usuario}</p>
                         <p class="mensagem">${post.mensagem}</p>
                     `;
-
-                    if (post.file) {
-                        var mediaElement = document.createElement("img");
-                        mediaElement.src = post.file;
-                        mediaElement.style.maxWidth = "100%";
-                        mediaElement.style.height = "auto";
-                        postElement.appendChild(mediaElement);
-                    }
 
                     postElement.appendChild(interacoesElement);
                     feedContainer.appendChild(postElement);
                 });
             }
-
-            function previewFotoPerfil() {
-                var inputFotoPerfil = document.getElementById('fotoPerfil');
-                if (inputFotoPerfil.files && inputFotoPerfil.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        fotoPerfil = e.target.result;
-                        localStorage.setItem('fotoPerfil', fotoPerfil);
-                        exibirPosts(); // Atualiza a exibição dos posts após adicionar a foto de perfil
-                    };
-
-                    reader.readAsDataURL(inputFotoPerfil.files[0]);
-                }
 
             function postar() {
                 var mensagem = document.getElementById('mensagem').value;
