@@ -283,6 +283,14 @@ form input[type="submit"] {
                 }
             }
 
+            if (post.file) {
+                        var mediaElement = document.createElement("img");
+                        mediaElement.src = post.file;
+                        mediaElement.style.maxWidth = "100%";
+                        mediaElement.style.height = "auto";
+                        postElement.appendChild(mediaElement);
+                    }
+
             window.onload = exibirPosts;
         </script>
     </div>
