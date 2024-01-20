@@ -199,25 +199,19 @@
 
         .user-options {
             display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .user-profile {
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
             background-color: #4b006b;
-            color: #fff;
             padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
         }
 
+        .user-profile,
         .settings {
-            background-color: #4b006b;
             color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+            cursor: pointer;}
     </style>
 </head>
 <body>
@@ -334,7 +328,6 @@
             // Implemente o redirecionamento para as configurações
             alert("Redirecionando para as configurações.");
         }
-
             window.onload = exibirPosts;
         </script>
     </div>
