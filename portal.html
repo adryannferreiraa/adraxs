@@ -8,161 +8,66 @@
     <title>Adraxs</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-}
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-.header-image {
-    width: 100%;
-    height: auto;
-    max-width: 400px; /* Defina o tamanho desejado para a largura máxima da imagem */
-}
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4b006b;
+            color: #fff;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-        
+        .header-image {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            margin: 0 auto;
+        }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    color: #fff;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
 
-.post {
-    background-color: #333;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 10px;
-    position: relative;
-}
+        form textarea,
+        form input[type="submit"],
+        form input[type="file"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-.usuario {
-    font-weight: bold;
-    color: #8e44ad;
-}
+        form input[type="submit"] {
+            background-color: #4b006b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.mensagem {
-    margin-top: 10px;
-}
-
-.interacoes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.interacao {
-    cursor: pointer;
-    color: #fff;
-}
-
-.likes {
-    color: #3498db;
-}
-
-.post-options {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    right: 0;
-    top: 0;
-    z-index: 1;
-}
-
-.post:hover .post-options {
-    display: flex;
-    flex-direction: column;
-}
-
-.post-options button {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 5px;
-    text-align: left;
-}
-
-.post-options button:hover {
-    background-color: #555;
-}
-
-.comentarios {
-    margin-top: 20px;
-}
-
-.comentario {
-    background-color: #444;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    position: relative;
-}
-
-.comentario-options {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    padding: 5px;
-    border-radius: 5px;
-    right: 0;
-    top: 0;
-    z-index: 1;
-}
-
-.comentario:hover .comentario-options {
-    display: flex;
-}
-
-.comentario-options button {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 2px;
-    text-align: left;
-    margin-right: 5px;
-}
-
-.comentario-options button:hover {
-    background-color: #555;
-}
-
-form {
-    margin-top: 20px;
-}
-
-form textarea,
-form input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-form input[type="submit"] {
-    background-color: #4b006b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.file-input {
+        .file-input {
             display: none;
         }
 
@@ -172,6 +77,124 @@ form input[type="submit"] {
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
+            display: inline-block;
+        }
+
+        .post {
+            background-color: #fff;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .usuario {
+            font-weight: bold;
+            color: #4b006b;
+            margin-bottom: 5px;
+        }
+
+        .mensagem {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .interacoes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .interacao {
+            cursor: pointer;
+            color: #4b006b;
+            transition: color 0.3s ease;
+        }
+
+        .interacao:hover {
+            color: #2a0038;
+        }
+
+        .likes {
+            color: #4b006b;
+        }
+
+        .post-options {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .post:hover .post-options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-options button {
+            background: none;
+            border: none;
+            color: #4b006b;
+            cursor: pointer;
+            padding: 5px;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        .post-options button:hover {
+            background-color: #f4f4f4;
+        }
+
+        .comentarios {
+            margin-top: 20px;
+        }
+
+        .comentario {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .comentario-options {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .comentario:hover .comentario-options {
+            display: flex;
+        }
+
+        .comentario-options button {
+            background: none;
+            border: none;
+            color: #4b006b;
+            cursor: pointer;
+            padding: 2px;
+            text-align: left;
+            margin-right: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .comentario-options button:hover {
+            background-color: #f4f4f4;
         }
     </style>
 </head>
@@ -180,8 +203,6 @@ form input[type="submit"] {
     <header>
         <img src="adraxs.png" class="header-image">
     </header>
-
-
 
     <div class="container">
         <form method="POST" onsubmit="postar(); return false">
@@ -192,6 +213,7 @@ form input[type="submit"] {
         </form>
 
         <div id="feed"></div>
+
 
         <script>
             var posts = JSON.parse(localStorage.getItem('posts')) || [];
