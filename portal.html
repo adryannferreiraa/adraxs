@@ -197,30 +197,15 @@
             background-color: #f4f4f4;
         }
 
-        .user-options {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #4b006b;
-            padding: 10px;
-        }
+       
 
-        .user-profile,
-        .settings {
-            color: #fff;
-            cursor: pointer;}
+       
     </style>
 </head>
 <body>
     <header>
         <img src="adraxs.png" class="header-image">
-        <div class="user-options">
-            <div class="user-profile" onclick="redirectToProfile()">Perfil</div>
-            <div class="settings" onclick="redirectToSettings()">Configurações</div>
-        </div>
+        
     </header>
 
     <div class="container">
@@ -319,15 +304,7 @@
                 }
             }
 
-            function redirectToProfile() {
-            // Implemente a redirecionamento para o perfil do usuário
-            alert("Redirecionando para o perfil do usuário.");
-        }
-
-        function redirectToSettings() {
-            // Implemente o redirecionamento para as configurações
-            alert("Redirecionando para as configurações.");
-        }
+           
             window.onload = exibirPosts;
         </script>
     </div>
