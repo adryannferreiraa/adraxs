@@ -196,12 +196,37 @@
         .comentario-options button:hover {
             background-color: #f4f4f4;
         }
+
+        .user-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .user-profile {
+            background-color: #4b006b;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .settings {
+            background-color: #4b006b;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-
     <header>
         <img src="adraxs.png" class="header-image">
+        <div class="user-options">
+            <div class="user-profile" onclick="redirectToProfile()">Perfil</div>
+            <div class="settings" onclick="redirectToSettings()">Configurações</div>
+        </div>
     </header>
 
     <div class="container">
@@ -299,6 +324,16 @@
                     exibirPosts();
                 }
             }
+
+            function redirectToProfile() {
+            // Implemente a redirecionamento para o perfil do usuário
+            alert("Redirecionando para o perfil do usuário.");
+        }
+
+        function redirectToSettings() {
+            // Implemente o redirecionamento para as configurações
+            alert("Redirecionando para as configurações.");
+        }
 
             window.onload = exibirPosts;
         </script>
