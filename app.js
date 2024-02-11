@@ -3,6 +3,12 @@ let socket;
 
 function connect() {
     code = document.getElementById('code-input').value;
+    
+    if (!code) {
+        alert('Por favor, insira um código válido.');
+        return;
+    }
+
     socket = new WebSocket(`ws://localhost:3000?code=${code}`);
     
     socket.onopen = () => {
