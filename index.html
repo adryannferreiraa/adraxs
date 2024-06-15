@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,11 +26,7 @@
             height: auto;
             margin-top: 20px;
             transition: width 0.5s; /* Adicionando transição para suavizar o redimensionamento da logo2 */
-        } .logo2p {
-            width: 250px;
-            height: auto;
-            margin-top: 20px;
-            transition: width 0.5s}
+        }
         .social-buttons {
             margin-top: 50px;
         }
@@ -66,6 +62,14 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        /* Estilo para o texto da história */
+        .history {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left;
+            padding: 0 20px;
+        }
     </style>
 </head>
 <body>
@@ -75,7 +79,10 @@
         <a href="https://api.whatsapp.com" class="whatsapp">WhatsApp</a>
         <a href="https://www.tiktok.com" class="tiktok">TikTok</a>
         <a href="https://www.instagram.com" class="instagram">Instagram</a>
-        <!-- Removido o botão do LinkedIn -->
+    </div>
+    <div class="history">
+        <h2>História da Adrya Social</h2>
+        <p>A Adrya Social nasceu da paixão por conectar pessoas e marcas através das redes sociais. Fundada em [ano de fundação], nossa missão é proporcionar estratégias inovadoras e conteúdos envolventes que impulsionam a presença digital dos nossos clientes.</p>
     </div>
     <!-- Botão para mudar o tema -->
     <button class="theme-button" onclick="changeTheme()">Mudar Tema</button>
