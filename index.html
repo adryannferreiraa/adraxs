@@ -7,28 +7,30 @@
     <title>Adrya Social</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             text-align: center;
-            margin-top: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #000;
             color: #fff;
-            transition: background-color 0.5s, color 0.5s; /* Adicionando transição para suavizar a mudança de tema */
+            transition: background-color 0.5s, color 0.5s;
+        }
+        header {
+            padding: 20px;
+            background-color: #111;
         }
         .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
             width: 150px;
-            transition: width 0.5s; /* Adicionando transição para suavizar o redimensionamento da logo */
+            transition: width 0.5s;
         }
         .logo2 {
             width: 250px;
             height: auto;
             margin-top: 20px;
-            transition: width 0.5s; /* Adicionando transição para suavizar o redimensionamento da logo2 */
+            transition: width 0.5s;
         }
         .social-buttons {
-            margin-top: 50px;
+            margin: 40px 0;
         }
         .social-buttons a {
             display: inline-block;
@@ -51,30 +53,67 @@
         .social-buttons a:hover {
             background-color: rgba(0, 0, 0, 0.7);
         }
-
-        /* Estilo para o botão de mudar tema */
         .theme-button {
-            margin-top: 20px;
+            margin: 20px 0;
             padding: 10px 20px;
             background-color: #fff;
             color: #000;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
-
-        /* Estilo para o texto da história */
+        .theme-button:hover {
+            background-color: #ddd;
+        }
         .history {
-            max-width: 600px;
+            max-width: 800px;
             margin: 20px auto;
             text-align: left;
             padding: 0 20px;
         }
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        .portfolio-item {
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px;
+            width: calc(33.333% - 30px);
+            transition: transform 0.3s;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-item h3 {
+            margin: 10px;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .portfolio-item {
+                width: calc(50% - 30px);
+            }
+        }
+        @media (max-width: 480px) {
+            .portfolio-item {
+                width: calc(100% - 30px);
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="logo2.png" alt="Logo" class="logo2">
-    <img src="logo.png" alt="Logo" class="logo">
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <img src="logo2.png" alt="Logo" class="logo2">
+    </header>
     <div class="social-buttons">
         <a href="https://api.whatsapp.com" class="whatsapp">WhatsApp</a>
         <a href="https://www.tiktok.com" class="tiktok">TikTok</a>
@@ -82,39 +121,39 @@
     </div>
     <div class="history">
         <h2>Um Sonho</h2>
-        <p>Como todo sonho, no meio do caminho sempre tem obstáculos, me chamo Adryann e vou te contar o começo da Adrya Social. Muita das vezes obstáculos vem como falta de equipamento, falta de apoio por parte da familia, mas o da ADRYA SOCIAL (antiga arymaker) veio como medo, medo de ser julgado ou até então comparado com algum outro profissional da área,
-            mas uma coisa que aprendemos quando novos, foi que nunca devemos ser vencidos por nossos medos e inseguranças, e aqui estamos nós, anunciados pela primeira vez no instagram no dia 21 de março de 2024, com apenas um foco "videomaker", o principal antes era apenas isso, com o tempo fomos percebendo que 
-            podemos ser mais, então vem o primeiro post no instagram pessoal mostrando todos nossos serviços, pouco tempo depois o post sai do ar pois decido mudar o nome, sim, algo completamente perigoso pois as pessoas estavam começando a me conhecer como arymaker, mas decidi mudar por algo mais profissional, algo que passasse segurança para as pessoas
+        <p>Como todo sonho, no meio do caminho sempre tem obstáculos, me chamo Adryann e vou te contar o começo da Adrya Social. Muita das vezes obstáculos vêm como falta de equipamento, falta de apoio por parte da família, mas o da ADRYA SOCIAL (antiga arymaker) veio como medo, medo de ser julgado ou até então comparado com algum outro profissional da área,
+            mas uma coisa que aprendemos quando novos, foi que nunca devemos ser vencidos por nossos medos e inseguranças, e aqui estamos nós, anunciados pela primeira vez no Instagram no dia 21 de março de 2024, com apenas um foco "videomaker". O principal antes era apenas isso, com o tempo fomos percebendo que 
+            podemos ser mais, então vem o primeiro post no Instagram pessoal mostrando todos nossos serviços. Pouco tempo depois o post sai do ar pois decido mudar o nome, sim, algo completamente perigoso pois as pessoas estavam começando a me conhecer como arymaker, mas decidi mudar por algo mais profissional, algo que passasse segurança para as pessoas
             e assim surge a ADRYA SOCIAL, com uma logo marcante, e que foi elogiada por todos a minha volta.</p>
-        
-    <!-- Botão para mudar o tema -->
+    </div>
+    <div class="portfolio">
+        <div class="portfolio-item">
+            <img src="portfolio1.jpg" alt="Trabalho 1">
+            <h3>Trabalho 1</h3>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio2.jpg" alt="Trabalho 2">
+            <h3>Trabalho 2</h3>
+        </div>
+        <div class="portfolio-item">
+            <img src="portfolio3.jpg" alt="Trabalho 3">
+            <h3>Trabalho 3</h3>
+        </div>
+        <!-- Adicione mais itens de portfólio conforme necessário -->
+    </div>
     <button class="theme-button" onclick="changeTheme()">Mudar Tema</button>
-
     <script>
         function changeTheme() {
             var body = document.body;
-            var logo = document.querySelector('.logo');
-            var logo2 = document.querySelector('.logo2');
             var themeButton = document.querySelector('.theme-button');
 
-            // Verifica se o tema atual é escuro
             if (body.style.backgroundColor === 'rgb(0, 0, 0)') {
-                // Muda para tema claro
                 body.style.backgroundColor = '#fff';
                 body.style.color = '#000';
-                // Troca as imagens
-                logo.src = 'logop.png';
-                logo2.src = 'logo2p.png';
-                // Atualiza o texto do botão
                 themeButton.textContent = 'Voltar ao Tema Escuro';
             } else {
-                // Muda para tema escuro
                 body.style.backgroundColor = '#000';
                 body.style.color = '#fff';
-                // Troca as imagens de volta
-                logo.src = 'logo.png';
-                logo2.src = 'logo2.png';
-                // Atualiza o texto do botão
                 themeButton.textContent = 'Mudar Tema';
             }
         }
