@@ -6,78 +6,74 @@
     <link rel="icon" href="adrya.ico" type="image/x-icon">
     <title>Adrya Social</title>
     <style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            text-align: center;
+        /* Reset de estilos */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             background-color: #000;
             color: #fff;
-            transition: background-color 0.5s, color 0.5s;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
+
+        /* Estilos do cabeçalho */
         header {
-            padding: 20px;
             background-color: #111;
+            padding: 20px;
         }
+
         .logo {
             width: 150px;
-            transition: width 0.5s;
-        }
-        .logo2 {
-            width: 250px;
             height: auto;
-            margin-top: 20px;
-            transition: width 0.5s;
+            display: block;
+            margin: 0 auto;
         }
+
+        /* Estilos dos botões sociais */
         .social-buttons {
             margin: 40px 0;
+            text-align: center;
         }
+
         .social-buttons a {
             display: inline-block;
             margin: 10px;
-            padding: 15px 20px;
+            padding: 15px 30px;
             text-decoration: none;
             color: #fff;
+            background-color: #333;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
-        .whatsapp {
-            background-color: #25D366;
-        }
-        .tiktok {
-            background-color: #69C9D0;
-        }
-        .instagram {
-            background-color: #e4405f;
-        }
+
         .social-buttons a:hover {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #555;
         }
-        .theme-button {
-            margin: 20px 0;
-            padding: 10px 20px;
-            background-color: #fff;
-            color: #000;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .theme-button:hover {
-            background-color: #ddd;
-        }
+
+        /* Estilos da seção de história */
         .history {
             max-width: 800px;
             margin: 20px auto;
-            text-align: left;
             padding: 0 20px;
+            text-align: justify;
         }
+
+        /* Estilos da seção de portfólio */
         .portfolio {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin: 40px 0;
+            padding: 0 20px;
         }
+
         .portfolio-item {
             background: #222;
             border-radius: 10px;
@@ -85,23 +81,31 @@
             margin: 15px;
             width: calc(33.333% - 30px);
             transition: transform 0.3s;
+            cursor: pointer;
         }
+
         .portfolio-item img {
             width: 100%;
             height: auto;
+            display: block;
         }
+
         .portfolio-item:hover {
             transform: scale(1.05);
         }
+
         .portfolio-item h3 {
             margin: 10px;
             color: #fff;
+            text-align: center;
         }
+
         @media (max-width: 768px) {
             .portfolio-item {
                 width: calc(50% - 30px);
             }
         }
+
         @media (max-width: 480px) {
             .portfolio-item {
                 width: calc(100% - 30px);
@@ -111,20 +115,18 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <img src="logo2.png" alt="Logo" class="logo2">
+        <img src="logo.png" alt="Logo Adrya Social" class="logo">
     </header>
     <div class="social-buttons">
-        <a href="https://api.whatsapp.com" class="whatsapp">WhatsApp</a>
-        <a href="https://www.tiktok.com" class="tiktok">TikTok</a>
-        <a href="https://www.instagram.com" class="instagram">Instagram</a>
+        <a href="https://api.whatsapp.com" class="social-button">WhatsApp</a>
+        <a href="https://www.tiktok.com" class="social-button">TikTok</a>
+        <a href="https://www.instagram.com" class="social-button">Instagram</a>
     </div>
     <div class="history">
         <h2>Um Sonho</h2>
-        <p>Como todo sonho, no meio do caminho sempre tem obstáculos, me chamo Adryann e vou te contar o começo da Adrya Social. Muita das vezes obstáculos vêm como falta de equipamento, falta de apoio por parte da família, mas o da ADRYA SOCIAL (antiga arymaker) veio como medo, medo de ser julgado ou até então comparado com algum outro profissional da área,
-            mas uma coisa que aprendemos quando novos, foi que nunca devemos ser vencidos por nossos medos e inseguranças, e aqui estamos nós, anunciados pela primeira vez no Instagram no dia 21 de março de 2024, com apenas um foco "videomaker". O principal antes era apenas isso, com o tempo fomos percebendo que 
-            podemos ser mais, então vem o primeiro post no Instagram pessoal mostrando todos nossos serviços. Pouco tempo depois o post sai do ar pois decido mudar o nome, sim, algo completamente perigoso pois as pessoas estavam começando a me conhecer como arymaker, mas decidi mudar por algo mais profissional, algo que passasse segurança para as pessoas
-            e assim surge a ADRYA SOCIAL, com uma logo marcante, e que foi elogiada por todos a minha volta.</p>
+        <p>Como todo sonho, no meio do caminho sempre há obstáculos. Me chamo Adryann e vou contar o início da Adrya Social. Muitas vezes, esses obstáculos se manifestam na forma de falta de equipamento ou de apoio da família. No caso da ADRYA SOCIAL (antiga arymaker), o maior obstáculo foi o medo. O medo de ser julgado ou comparado com outros profissionais da área.</p>
+        <p>No entanto, aprendemos desde cedo que não devemos ser dominados pelos nossos medos e inseguranças. Assim, em 21 de março de 2024, fizemos nosso primeiro anúncio no Instagram, focados apenas em produção de vídeos. Com o tempo, percebemos que poderíamos ir além. Publicamos nosso primeiro post pessoal no Instagram, mostrando todos os nossos serviços.</p>
+        <p>Pouco tempo depois, retiramos o post do ar para mudar o nome. Sim, foi uma decisão arriscada, pois as pessoas já começavam a nos conhecer como arymaker. Mas decidimos mudar para algo mais profissional e que transmitisse segurança. Assim nasceu a ADRYA SOCIAL, com uma logo marcante que foi elogiada por todos ao nosso redor.</p>
     </div>
     <div class="portfolio">
         <div class="portfolio-item">
@@ -141,23 +143,6 @@
         </div>
         <!-- Adicione mais itens de portfólio conforme necessário -->
     </div>
-    <button class="theme-button" onclick="changeTheme()">Mudar Tema</button>
-    <script>
-        function changeTheme() {
-            var body = document.body;
-            var themeButton = document.querySelector('.theme-button');
-
-            if (body.style.backgroundColor === 'rgb(0, 0, 0)') {
-                body.style.backgroundColor = '#fff';
-                body.style.color = '#000';
-                themeButton.textContent = 'Voltar ao Tema Escuro';
-            } else {
-                body.style.backgroundColor = '#000';
-                body.style.color = '#fff';
-                themeButton.textContent = 'Mudar Tema';
-            }
-        }
-    </script>
 </body>
 </html>
 
