@@ -26,20 +26,19 @@
         /* Estilos do cabeçalho */
         header {
             background-color: #111;
-            padding: 20px;
+            padding: 20px 0;
+            text-align: center;
         }
 
         .logo {
-            width: 150px;
+            max-width: 100%;
             height: auto;
-            display: block;
-            margin: 0 auto;
         }
 
         /* Estilos dos botões sociais */
         .social-buttons {
-            margin: 40px 0;
             text-align: center;
+            margin-bottom: 40px;
         }
 
         .social-buttons a {
@@ -51,6 +50,7 @@
             background-color: #333;
             border-radius: 5px;
             transition: background-color 0.3s;
+            font-size: 16px;
         }
 
         .social-buttons a:hover {
@@ -60,7 +60,7 @@
         /* Estilos da seção de história */
         .history {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 0 auto 40px;
             padding: 0 20px;
             text-align: justify;
         }
@@ -69,8 +69,7 @@
         .portfolio {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            margin: 40px 0;
+            justify-content: space-around;
             padding: 0 20px;
         }
 
@@ -78,7 +77,7 @@
             background: #222;
             border-radius: 10px;
             overflow: hidden;
-            margin: 15px;
+            margin: 15px 0;
             width: calc(33.333% - 30px);
             transition: transform 0.3s;
             cursor: pointer;
@@ -98,6 +97,12 @@
             margin: 10px;
             color: #fff;
             text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-item {
+                width: calc(50% - 30px);
+            }
         }
 
         @media (max-width: 768px) {
@@ -145,4 +150,3 @@
     </div>
 </body>
 </html>
-
