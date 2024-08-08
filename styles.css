@@ -1,0 +1,159 @@
+/* styles.css */
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #141414;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons span {
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilos da seção hero */
+.hero {
+    height: 400px;
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    position: relative;
+    margin-top: 60px; /* Deixe espaço para o cabeçalho fixo */
+    color: #fff;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e50914;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f40612;
+}
+
+/* Estilos da seção de conteúdo */
+.content {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.carousel-item {
+    margin-right: 10px;
+}
+
+.carousel-item img {
+    width: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #141414;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .carousel-item img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item img {
+        width: 80px;
+    }
+}
