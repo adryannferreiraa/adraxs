@@ -84,30 +84,33 @@ nav a:hover::after {
 
 /* Estilos da seção hero */
 .hero {
-    height: 400px;
-    background: url('hero-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center/cover;
     position: relative;
-    margin-top: 60px; /* Espaço para o cabeçalho fixo */
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px; /* Espaço para o cabeçalho fixo */
 }
 
 .hero-content {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
+    text-align: center;
+    max-width: 90%; /* Melhor ajuste para telas pequenas */
+    background: rgba(0, 0, 0, 0.7); /* Sobreposição escura para melhorar a legibilidade */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 2.5rem; /* Ajuste para melhor legibilidade em dispositivos móveis */
     margin-bottom: 10px;
     font-weight: 700;
-    max-width: 600px;
 }
 
 .hero-content p {
-    font-size: 22px;
+    font-size: 1.25rem; /* Ajuste para melhor legibilidade em dispositivos móveis */
     margin-bottom: 20px;
-    max-width: 600px;
 }
 
 .btn {
@@ -117,7 +120,7 @@ nav a:hover::after {
     color: #fff;
     background-color: #e50914;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1.125rem; /* Ajuste para melhor legibilidade em dispositivos móveis */
     font-weight: 600;
     transition: background-color 0.3s;
 }
@@ -136,7 +139,7 @@ nav a:hover::after {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 1.75rem; /* Ajuste para melhor legibilidade em dispositivos móveis */
     margin: 20px 0;
     font-weight: 700;
 }
@@ -173,9 +176,26 @@ footer {
     width: 100%;
 }
 
+/* Media Queries para responsividade */
 @media (max-width: 1024px) {
     .carousel-item img {
         width: 150px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 }
 
@@ -183,10 +203,42 @@ footer {
     .carousel-item img {
         width: 120px;
     }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-content p {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 480px) {
     .carousel-item img {
         width: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        font-size: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1rem;
     }
 }
