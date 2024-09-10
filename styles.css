@@ -134,3 +134,9 @@ footer {
 footer p {
   margin: 0;
 }
+.logo {
+  max-width: 100%; /* Ajusta a largura da imagem para caber no contêiner */
+  height: auto;    /* Mantém a proporção da imagem */
+  display: block;  /* Remove o espaço embaixo da imagem, se necessário */
+  margin: 0 auto;  /* Centraliza a imagem, se desejado */
+}
