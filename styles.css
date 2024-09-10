@@ -1,29 +1,140 @@
-#post-news {
-  margin-top: 2rem;
+/* Reset básico */
+body, h1, h2, h3, p, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#news-form {
+/* Tipografia e cores */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#news-form label {
-  margin: 0.5rem 0 0.2rem;
+header h1 a {
+  color: #fff;
+  text-decoration: none;
 }
 
-#news-form input, #news-form textarea {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
 }
 
-#news-form button {
-  padding: 0.5rem;
-  background-color: #ff0000; /* Vermelho */
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
+nav a:hover {
+  text-decoration: underline;
 }
 
-#news-form button:hover {
-  background-color: #cc0000;
+.hero {
+  background: #fff;
+  padding: 20px 0;
+}
+
+.hero-item {
+  position: relative;
+}
+
+.hero-item img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-item h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.hero-item h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-item p {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  max-width: 300px;
+}
+
+.news-list {
+  background: #fff;
+  padding: 20px 0;
+}
+
+.news-list .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+}
+
+.news-item h3 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.news-item h3 a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
 }
