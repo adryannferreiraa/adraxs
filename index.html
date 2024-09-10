@@ -1,59 +1,71 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fala Povo </title>
+    <title>Fala Povo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><a href="index.html">Portal Fala Povo</a></h1>
+            <h1>Fala Povo</h1>
             <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Mundo</a>
-                <a href="#">Política</a>
-                <a href="#">Economia</a>
-                <a href="#">Esportes</a>
-                <a href="#">Cultura</a>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Mundo</a></li>
+                    <li><a href="#">Esportes</a></li>
+                    <li><a href="#">Cultura</a></li>
+                </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section class="hero">
-            <div class="container">
-                <article class="hero-item">
-                    <img src="https://via.placeholder.com/1200x600" alt="Notícia Principal">
-                    <div class="hero-content">
-                        <h2><a href="#">Notícia Principal Destaque</a></h2>
-                        <p>Resumo da notícia principal que atrai a atenção dos leitores com informações relevantes e atualizadas.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="news-list">
-            <div class="container">
-                <article class="news-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Notícia 1">
-                    <h3><a href="#">Eleições 2024</a></h3>
-                    <p>Resumo da notícia 1...</p>
-                </article>
-                <article class="news-item">
-                    <img src="https://via.placeholder.com/400x300" alt="Notícia 2">
-                    <h3><a href="#">Título da Notícia 2</a></h3>
-                    <p>Resumo da notícia 2...</p>
-                </article>
-                <!-- Mais notícias podem ser adicionadas aqui -->
-            </div>
-        </section>
+        <div class="container">
+            <section class="featured">
+                <h2>Notícias em Destaque</h2>
+                <div class="news-grid">
+                    <article class="news-item">
+                        <img src="https://via.placeholder.com/600x400" alt="Notícia 1">
+                        <div class="news-content">
+                            <h3>Título da Notícia 1</h3>
+                            <p>Resumo da notícia em destaque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis vehicula dui, non fermentum elit.</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://via.placeholder.com/600x400" alt="Notícia 2">
+                        <div class="news-content">
+                            <h3>Título da Notícia 2</h3>
+                            <p>Resumo da notícia em destaque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis vehicula dui, non fermentum elit.</p>
+                            <a href="#" class="read-more">Leia mais</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="latest-news">
+                <h2>Últimas Notícias</h2>
+                <div class="news-list">
+                    <article class="news-item">
+                        <h3>Título da Última Notícia 1</h3>
+                        <p>Resumo da última notícia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis vehicula dui, non fermentum elit.</p>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </article>
+                    <article class="news-item">
+                        <h3>Título da Última Notícia 2</h3>
+                        <p>Resumo da última notícia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis vehicula dui, non fermentum elit.</p>
+                        <a href="#" class="read-more">Leia mais</a>
+                    </article>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 Notícias Urbanas. Todos os direitos reservados.</p>
-            <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
+            <p>&copy; 2024 Fala Povo. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>
