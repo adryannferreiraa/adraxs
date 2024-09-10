@@ -1,64 +1,29 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#post-news {
+  margin-top: 2rem;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+#news-form {
+  display: flex;
+  flex-direction: column;
 }
 
-header {
+#news-form label {
+  margin: 0.5rem 0 0.2rem;
+}
+
+#news-form input, #news-form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#news-form button {
+  padding: 0.5rem;
   background-color: #ff0000; /* Vermelho */
   color: #ffffff;
-  padding: 1rem;
-  text-align: center;
+  border: none;
+  cursor: pointer;
 }
 
-header h1 {
-  margin-bottom: 0.5rem;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 1rem;
-}
-
-.news article {
-  border-bottom: 1px solid #cccccc;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-}
-
-.news h2 {
-  color: #0000ff; /* Azul */
-}
-
-footer {
-  background-color: #333333;
-  color: #ffffff;
-  text-align: center;
-  padding: 0.5rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+#news-form button:hover {
+  background-color: #cc0000;
 }
