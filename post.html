@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Fala Povo - Início</title>
+  <title>Fala Povo - Postar Notícia</title>
 </head>
 <body>
   <header>
@@ -17,19 +17,19 @@
     </div>
   </header>
   <main class="container">
-    <section class="articles">
-      <article>
-        <h2>Título da Notícia 1</h2>
-        <p>Descrição breve da notícia 1. Descrição do que a notícia aborda. Continue lendo...</p>
-        <a href="#">Leia mais</a>
-      </article>
-      <article>
-        <h2>Título da Notícia 2</h2>
-        <p>Descrição breve da notícia 2. Descrição do que a notícia aborda. Continue lendo...</p>
-        <a href="#">Leia mais</a>
-      </article>
-      <!-- Mais artigos podem ser adicionados aqui -->
-    </section>
+    <h2>Postar Nova Notícia</h2>
+    <form>
+      <label for="title">Título:</label>
+      <input type="text" id="title" name="title" placeholder="Digite o título" required>
+
+      <label for="content">Conteúdo:</label>
+      <textarea id="content" name="content" rows="8" placeholder="Digite o conteúdo da notícia" required></textarea>
+
+      <label for="image">Imagem (opcional):</label>
+      <input type="file" id="image" name="image">
+
+      <button type="submit">Publicar</button>
+    </form>
   </main>
   <footer>
     <div class="container">
