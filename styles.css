@@ -143,18 +143,6 @@ footer p {
 
 
 
-/* Estilos para o cabeçalho */
-header {
-  background-color: #fff; /* Fundo branco para o cabeçalho */
-  padding: 10px 0; /* Espaçamento interno */
-  border-bottom: 1px solid #ddd; /* Borda leve na parte inferior */
-}
-
-.logo {
-  max-width: 150px; /* Limita o tamanho máximo do logo */
-  display: block; /* Exibe o logo como um bloco */
-  margin: 0 auto; /* Centraliza o logo */
-}
 
 nav ul {
   list-style-type: none; /* Remove os marcadores da lista */
