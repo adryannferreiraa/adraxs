@@ -140,20 +140,8 @@ footer p {
   display: block;  /* Remove o espaço embaixo da imagem, se necessário */
   margin: 0 auto;  /* Centraliza a imagem, se desejado */
 }
-/* Estilos gerais para o corpo e container */
-body {
-  font-family: Arial, sans-serif; /* Fonte padrão */
-  color: #333; /* Cor do texto padrão */
-  background-color: #f4f4f4; /* Cor de fundo leve */
-  margin: 0; /* Remove margens padrão */
-  padding: 0; /* Remove preenchimento padrão */
-}
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 /* Estilos para o cabeçalho */
 header {
