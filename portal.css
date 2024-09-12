@@ -144,31 +144,36 @@
 
 /* Estilos gerais para o artigo de notícias */
 .news-full {
-    max-width: 800px; /* Define uma largura máxima para o artigo */
+    max-width: 750px; /* Define uma largura máxima para o artigo */
     margin: 0 auto; /* Centraliza o artigo na página */
     padding: 20px; /* Adiciona espaçamento interno */
-    line-height: 1.6; /* Melhora a legibilidade do texto */
+    line-height: 1.8; /* Melhora a legibilidade do texto */
+    background-color: #fff; /* Fundo branco para destacar o conteúdo */
+    border-radius: 10px; /* Arredondamento das bordas do container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito moderno */
 }
 
 /* Estilo para o título do artigo */
 .news-full h1 {
-    font-size: 2.5em; /* Tamanho do título */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
-    color: #333; /* Cor do título */
-    font-weight: bold; /* Deixa o título mais destacado */
+    font-size: 2.2em; /* Tamanho do título */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    color: #222; /* Cor do título */
+    font-weight: 700; /* Negrito para destacar o título */
+    text-align: center; /* Centraliza o título */
 }
 
 /* Estilo para a data e autor */
 .author-date {
     font-size: 1em; /* Tamanho da fonte */
-    color: #555; /* Cor do texto */
-    margin-bottom: 20px; /* Espaçamento abaixo da data */
+    color: #777; /* Cor do texto */
+    margin-bottom: 25px; /* Espaçamento abaixo da data */
     font-style: italic; /* Estilo itálico para a data */
+    text-align: center; /* Centraliza a data e o autor */
 }
 
 /* Estilo para a imagem da notícia */
 .news-image {
-    border-radius: 10px; /* Arredondamento das bordas */
+    border-radius: 8px; /* Arredondamento das bordas */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito moderno */
     max-width: 100%; /* Ajusta a imagem ao tamanho do container */
     height: auto; /* Mantém a proporção da imagem */
@@ -180,6 +185,7 @@
 .news-full p {
     margin-bottom: 20px; /* Espaçamento entre parágrafos */
     color: #333; /* Cor do texto */
+    font-size: 1.1em; /* Tamanho da fonte */
 }
 
 /* Estilo para a seção de artigos relacionados */
@@ -188,9 +194,11 @@
 }
 
 .related-articles h2 {
-    font-size: 2em; /* Tamanho do título da seção */
-    margin-bottom: 15px; /* Espaçamento abaixo do título */
-    color: #333; /* Cor do título */
+    font-size: 1.8em; /* Tamanho do título da seção */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #222; /* Cor do título */
+    border-bottom: 2px solid #ddd; /* Linha sutil abaixo do título */
+    padding-bottom: 10px; /* Espaçamento abaixo da linha */
 }
 
 .related-articles ul {
@@ -199,32 +207,35 @@
 }
 
 .related-articles li {
-    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+    margin-bottom: 12px; /* Espaçamento entre os itens da lista */
 }
 
 .related-articles a {
-    color: #0066cc; /* Cor dos links */
+    color: #007bff; /* Cor dos links */
     text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 500; /* Destaca o texto dos links */
 }
 
 .related-articles a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #0056b3; /* Cor mais escura ao passar o mouse */
 }
 
 /* Estilo para o link de volta à página inicial */
 .back-to-home {
     display: inline-block; /* Exibe o link como um bloco inline */
-    padding: 10px 15px; /* Espaçamento interno */
-    margin-top: 20px; /* Espaçamento acima do link */
+    padding: 12px 20px; /* Espaçamento interno */
+    margin-top: 30px; /* Espaçamento acima do link */
     border: 1px solid #ddd; /* Borda leve ao redor do link */
     border-radius: 5px; /* Arredondamento das bordas */
-    background-color: #f9f9f9; /* Cor de fundo do link */
+    background-color: #f8f9fa; /* Cor de fundo do link */
     color: #333; /* Cor do texto do link */
     text-decoration: none; /* Remove o sublinhado do link */
-    font-weight: bold; /* Destaca o texto do link */
+    font-weight: 500; /* Destaca o texto do link */
+    text-align: center; /* Centraliza o texto do link */
 }
 
 .back-to-home:hover {
-    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
-    border-color: #bbb; /* Cor da borda ao passar o mouse */
+    background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
+    border-color: #ccc; /* Cor da borda ao passar o mouse */
 }
