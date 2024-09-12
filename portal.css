@@ -149,7 +149,7 @@
     padding: 20px; /* Adiciona espaçamento interno */
     line-height: 1.8; /* Melhora a legibilidade do texto */
     background-color: #fff; /* Fundo branco para destacar o conteúdo */
-    border-radius: 10px; /* Arredondamento das bordas do container */
+    border: 1px solid #e0e0e0; /* Borda leve ao redor do container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito moderno */
 }
 
@@ -173,8 +173,8 @@
 
 /* Estilo para a imagem da notícia */
 .news-image {
-    border-radius: 8px; /* Arredondamento das bordas */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito moderno */
+    border: 1px solid #ddd; /* Borda leve ao redor da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito moderno */
     max-width: 100%; /* Ajusta a imagem ao tamanho do container */
     height: auto; /* Mantém a proporção da imagem */
     display: block; /* Remove o espaço extra embaixo da imagem */
@@ -197,7 +197,7 @@
     font-size: 1.8em; /* Tamanho do título da seção */
     margin-bottom: 20px; /* Espaçamento abaixo do título */
     color: #222; /* Cor do título */
-    border-bottom: 2px solid #ddd; /* Linha sutil abaixo do título */
+    border-bottom: 2px solid #e0e0e0; /* Linha sutil abaixo do título */
     padding-bottom: 10px; /* Espaçamento abaixo da linha */
 }
 
