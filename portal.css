@@ -142,31 +142,89 @@
   }
 /* Adicione estas regras no seu arquivo styles.css */
 
-.news-image {
-    border-radius: 15px; /* Ajuste o valor conforme a necessidade */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para um efeito moderno */
-    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove o espaço embaixo da imagem */
-    margin: 0 auto; /* Centraliza a imagem no container */
-}
-
-/* Adicionando uma regra para o container da imagem */
+/* Estilos gerais para o artigo de notícias */
 .news-full {
-    text-align: center; /* Centraliza o texto e a imagem no artigo */
-    padding: 20px; /* Espaçamento interno */
+    max-width: 800px; /* Define uma largura máxima para o artigo */
+    margin: 0 auto; /* Centraliza o artigo na página */
+    padding: 20px; /* Adiciona espaçamento interno */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
 }
 
-/* Media Queries para ajustes em diferentes tamanhos de tela */
-@media (max-width: 768px) {
-    .news-image {
-        border-radius: 10px; /* Menor arredondamento para telas menores */
-    }
+/* Estilo para o título do artigo */
+.news-full h1 {
+    font-size: 2.5em; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do título */
+    font-weight: bold; /* Deixa o título mais destacado */
 }
 
-@media (max-width: 480px) {
-    .news-image {
-        border-radius: 5px; /* Menor arredondamento para telas muito pequenas */
-    }
+/* Estilo para a data e autor */
+.author-date {
+    font-size: 1em; /* Tamanho da fonte */
+    color: #555; /* Cor do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo da data */
+    font-style: italic; /* Estilo itálico para a data */
 }
-  
+
+/* Estilo para a imagem da notícia */
+.news-image {
+    border-radius: 10px; /* Arredondamento das bordas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito moderno */
+    max-width: 100%; /* Ajusta a imagem ao tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço extra embaixo da imagem */
+    margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaço abaixo */
+}
+
+/* Estilo para os parágrafos */
+.news-full p {
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para a seção de artigos relacionados */
+.related-articles {
+    margin-top: 40px; /* Espaçamento acima da seção */
+}
+
+.related-articles h2 {
+    font-size: 2em; /* Tamanho do título da seção */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do título */
+}
+
+.related-articles ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento da lista */
+}
+
+.related-articles li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+.related-articles a {
+    color: #0066cc; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.related-articles a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilo para o link de volta à página inicial */
+.back-to-home {
+    display: inline-block; /* Exibe o link como um bloco inline */
+    padding: 10px 15px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaçamento acima do link */
+    border: 1px solid #ddd; /* Borda leve ao redor do link */
+    border-radius: 5px; /* Arredondamento das bordas */
+    background-color: #f9f9f9; /* Cor de fundo do link */
+    color: #333; /* Cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Destaca o texto do link */
+}
+
+.back-to-home:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+    border-color: #bbb; /* Cor da borda ao passar o mouse */
+}
