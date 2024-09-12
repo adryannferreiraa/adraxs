@@ -140,8 +140,7 @@
     display: block;  /* Remove o espaço embaixo da imagem, se necessário */
     margin: 0 auto;  /* Centraliza a imagem, se desejado */
   }
-  /* Estilos gerais para o corpo e container */
-/* Estilos gerais para o corpo e container */
+
 /* Estilos gerais para o corpo e container */
 body {
     font-family: Arial, sans-serif; /* Fonte padrão */
@@ -165,7 +164,7 @@ body {
     border-radius: 5px; /* Arredondamento leve das bordas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
     margin-bottom: 40px; /* Espaçamento abaixo do artigo */
-    text-align: center; /* Centraliza o texto dentro do container do artigo */
+    text-align: left; /* Alinhamento do texto à esquerda */
 }
 
 .news-full h1 {
@@ -201,7 +200,7 @@ body {
     max-height: 500px; /* Define uma altura máxima para a imagem */
     object-fit: cover; /* Garante que a imagem cubra o espaço definido */
     display: block; /* Remove o espaço extra embaixo da imagem */
-    margin: 20px auto; /* Centraliza a imagem com margem automática */
+    margin: 20px 0; /* Margem superior e inferior */
 }
 
 /* Estilo para os parágrafos da matéria */
