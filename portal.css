@@ -285,3 +285,32 @@ body {
         font-size: 0.9em; /* Ajusta o tamanho da descrição */
     }
 }
+/* Estilos para os botões de compartilhamento */
+.share-buttons {
+    text-align: center; /* Centraliza o conteúdo dos botões */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+}
+
+.share-icons {
+    display: flex; /* Exibe os botões em linha */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.share-button {
+    display: inline-block; /* Exibe os botões como blocos inline */
+    border-radius: 5px; /* Arredondamento das bordas */
+    padding: 10px 15px; /* Espaçamento interno */
+    background-color: #e00; /* Cor de fundo vermelha */
+    color: #fff; /* Cor do texto branca */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Destaca o texto */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para mudanças de cor */
+}
+
+.share-button:hover {
+    background-color: #c00; /* Cor de fundo vermelha mais escura ao passar o mouse */
+    color: #f8f8f8; /* Cor do texto ao passar o mouse */
+}
