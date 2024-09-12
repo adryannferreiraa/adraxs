@@ -141,6 +141,7 @@
     margin: 0 auto;  /* Centraliza a imagem, se desejado */
   }
   /* Estilos gerais para o corpo e container */
+/* Estilos gerais para o corpo e container */
 body {
     font-family: Arial, sans-serif; /* Fonte padrão */
     color: #333; /* Cor do texto padrão */
@@ -196,6 +197,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito moderno */
     max-width: 100%; /* Ajusta a imagem ao tamanho do container */
     height: auto; /* Mantém a proporção da imagem */
+    max-height: 500px; /* Define uma altura máxima para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço definido */
     display: block; /* Remove o espaço extra embaixo da imagem */
     margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaço abaixo */
 }
