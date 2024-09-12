@@ -182,16 +182,13 @@ body {
     font-size: 1em; /* Tamanho da fonte */
     color: #777; /* Cor do texto */
     margin-bottom: 25px; /* Espaçamento abaixo da data */
-    text-align: center; /* Centraliza o texto */
+    text-align: left; /* Alinhamento à esquerda */
 }
 
 .author {
     color: #007bff; /* Cor do nome do autor */
+    font-weight: bold; /* Nome do autor em negrito */
     text-decoration: none; /* Remove o sublinhado do link */
-}
-
-.author:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 .news-image {
