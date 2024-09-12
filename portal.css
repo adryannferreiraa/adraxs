@@ -142,6 +142,7 @@
   }
   /* Estilos gerais para o corpo e container */
 /* Estilos gerais para o corpo e container */
+/* Estilos gerais para o corpo e container */
 body {
     font-family: Arial, sans-serif; /* Fonte padrão */
     color: #333; /* Cor do texto padrão */
@@ -164,6 +165,7 @@ body {
     border-radius: 5px; /* Arredondamento leve das bordas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
     margin-bottom: 40px; /* Espaçamento abaixo do artigo */
+    text-align: center; /* Centraliza o texto dentro do container do artigo */
 }
 
 .news-full h1 {
@@ -183,7 +185,6 @@ body {
     font-size: 1em; /* Tamanho da fonte */
     color: #777; /* Cor do texto */
     margin-bottom: 25px; /* Espaçamento abaixo da data */
-    text-align: left; /* Alinhamento à esquerda */
 }
 
 .author {
@@ -200,7 +201,7 @@ body {
     max-height: 500px; /* Define uma altura máxima para a imagem */
     object-fit: cover; /* Garante que a imagem cubra o espaço definido */
     display: block; /* Remove o espaço extra embaixo da imagem */
-    margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaço abaixo */
+    margin: 20px auto; /* Centraliza a imagem com margem automática */
 }
 
 /* Estilo para os parágrafos da matéria */
