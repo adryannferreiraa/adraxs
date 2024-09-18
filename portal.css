@@ -404,7 +404,7 @@ li {
 .candidate-details h3 {
   font-size: 24px;
   margin: 5px 0;
-  color: #0077b5;
+  color: #ff0000;
 }
 
 .candidate-details p {
@@ -429,7 +429,7 @@ li {
 
 .download-button {
   display: inline-block;
-  background-color: #0077b5;
+  background-color: #ff0000;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -439,7 +439,7 @@ li {
 }
 
 .download-button:hover {
-  background-color: #005f8a;
+  background-color: #ff0000;
 }
 
 .social-links {
@@ -453,7 +453,7 @@ li {
 }
 
 .social-links a {
-  color: #0077b5;
+  color: #ff0000;
   text-decoration: none;
 }
 
@@ -474,7 +474,7 @@ li {
 }
 
 .candidate-link {
-  background-color: #0077b5;
+  background-color: #0004ff;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -484,5 +484,29 @@ li {
 }
 
 .candidate-link:hover {
-  background-color: #005f8a;
+  background-color: #0400ff;
+}.candidate-profile {
+  background-color: #f9f9f9; /* Cor de fundo do quadrado */
+  border: 1px solid #ccc; /* Borda do quadrado */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 20px; /* Espaçamento interno */
+  margin: 20px 0; /* Espaçamento externo */
+}
+
+.candidate-section {
+  display: flex; /* Alinha foto e detalhes lado a lado */
+  align-items: center; /* Centraliza verticalmente */
+  margin-bottom: 20px; /* Espaço entre a seção de candidato e informações */
+}
+
+.candidate-photo {
+  width: 150px; /* Ajuste o tamanho da foto */
+  height: auto; /* Mantém a proporção */
+  margin-right: 20px; /* Espaço entre a foto e as informações */
+}
+
+.candidate-details {
+  display: flex;
+  flex-direction: column; /* Coloca os detalhes em coluna */
 }
