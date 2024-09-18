@@ -513,4 +513,30 @@ li {
   display: flex;
   flex-direction: column; /* Coloca os detalhes em coluna */
 }
-w
+.candidate-profile {
+  position: relative;
+  background-color: #fff; /* Cor de fundo do quadrado */
+  padding: 20px; /* Espaçamento interno */
+  margin: 20px auto; /* Espaçamento externo e centralização */
+  width: 80%; /* Largura do quadrado */
+  max-width: 800px; /* Largura máxima */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.candidate-profile::before,
+.candidate-profile::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px; /* Espessura da linha */
+  background-color: red; /* Cor da linha */
+}
+
+.candidate-profile::before {
+  top: 0; /* Linha superior */
+}
+
+.candidate-profile::after {
+  bottom: 0; /* Linha inferior */
+}
