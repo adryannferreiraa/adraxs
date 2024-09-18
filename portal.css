@@ -314,3 +314,13 @@ body {
     background-color: #c00; /* Cor de fundo vermelha mais escura ao passar o mouse */
     color: #f8f8f8; /* Cor do texto ao passar o mouse */
 }
+ul {
+  padding-left: 20px; /* Ajuste conforme necessário */
+  list-style-position: inside; /* Garante que os pontos fiquem dentro do "quadrado" */
+}
+
+li {
+  padding: 5px 0; /* Espaçamento entre os itens */
+  word-wrap: break-word; /* Garante que textos longos se ajustem ao tamanho da tela */
+  margin-left: 0; /* Remove qualquer indentação adicional */
+}
