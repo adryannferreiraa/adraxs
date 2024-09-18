@@ -341,7 +341,7 @@ li {
 
 
 .vote-button {
-  background-color: #e40000; /* Cor semelhante aos botões de compartilhamento */
+  background-color: #ff0000; /* Cor semelhante aos botões de compartilhamento */
   color: white;
   padding: 10px 15px; /* Reduzindo o padding para caber em telas menores */
   text-decoration: none;
