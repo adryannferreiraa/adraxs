@@ -324,3 +324,40 @@ li {
   word-wrap: break-word; /* Garante que textos longos se ajustem ao tamanho da tela */
   margin-left: 0; /* Remove qualquer indentação adicional */
 }
+/* Cabeçalho com Flexbox para manter tudo em uma linha */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px; /* Espaço entre os itens */
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Para o layout móvel */
+@media (max-width: 768px) {
+  header nav ul {
+      flex-wrap: wrap;
+  }
+}
+
+/* Estilo dos partidos */
+.pl { color: blue; font-weight: bold; }
+.psd { color: green; font-weight: bold; }
+.psdb { color: yellow; font-weight: bold; }
+.pt { color: red; font-weight: bold; }
+.cidadania { color: rgb(255, 55, 178); font-weight: bold; }
+.pp { color: lightblue; font-weight: bold; }
+.pode { color: darkblue; font-weight: bold; }
