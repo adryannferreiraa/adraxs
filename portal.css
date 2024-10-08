@@ -21,7 +21,7 @@ body {
 
 /* Estilo do cabeçalho */
 header {
-  background: red;
+  background: rgb(25, 199, 2);
   color: white;
   padding: 20px 0;
 }
@@ -218,7 +218,7 @@ body {
     font-size: 1.8em; /* Tamanho do título da seção */
     margin-bottom: 20px; /* Espaçamento abaixo do título */
     color: #222; /* Cor do título */
-    border-bottom: 2px solid #e00; /* Linha vermelha abaixo do título */
+    border-bottom: 2px solid rgb(255, 230, 2); /* Linha vermelha abaixo do título */
     padding-bottom: 10px; /* Espaçamento abaixo da linha */
 }
 
@@ -301,7 +301,7 @@ body {
     display: inline-block; /* Exibe os botões como blocos inline */
     border-radius: 5px; /* Arredondamento das bordas */
     padding: 10px 15px; /* Espaçamento interno */
-    background-color: #e00; /* Cor de fundo vermelha */
+    background-color: rgb(59, 197, 5); /* Cor de fundo vermelha */
     color: #fff; /* Cor do texto branca */
     text-decoration: none; /* Remove o sublinhado do link */
     font-weight: bold; /* Destaca o texto */
@@ -453,7 +453,7 @@ li {
 }
 
 .social-links a {
-  color: #ff0000;
+  color: #51ff00;
   text-decoration: none;
 }
 
@@ -530,7 +530,7 @@ li {
   left: 0;
   right: 0;
   height: 3px; /* Espessura da linha */
-  background-color: red; /* Cor da linha */
+  background-color: rgb(255, 251, 0); /* Cor da linha */
 }
 
 .candidate-profile::before {
