@@ -4,12 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FBI - Caso Laura Mendes</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Resetando algumas propriedades básicas */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #0A1D2A; /* Azul escuro, cor associada à autoridade */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header .investigador {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: #222;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Conteúdo principal */
+        main {
+            padding: 30px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        main h2 {
+            font-size: 28px;
+            color: #0A1D2A;
+            margin-bottom: 15px;
+        }
+
+        main p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0A1D2A;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Estilo de links */
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <img src="fbi-Logo-.png" alt="FBI Logo" class="logo">
+        <img src="imagens/fbi-logo.png" alt="FBI Logo" class="logo">
         <h1>FBI - CASO LAURA MENDES</h1>
         <p class="investigador">Investigador Cruzariolli</p>
     </header>
@@ -24,11 +137,11 @@
 
     <main>
         <h2>Resumo do Caso</h2>
-        <p>A advogada Laura Mendes desapareceu após um jantar na Vila Madalena, SP. Duas semanas depois, seu corpo foi encontrado em um galpão abandonado...</p>
+        <p>A advogada Laura Mendes desapareceu após um jantar na Vila Madalena, SP. Duas semanas depois, seu corpo foi encontrado em um galpão abandonado nas periferias da cidade. A investigação está em andamento, e o caso foi declarado como de alta prioridade. O FBI está coordenando esforços com as autoridades locais para capturar os responsáveis.</p>
     </main>
 
     <footer>
-        <p>© 2025 FBI - Unidade de Crimes Especiais.</p>
+        <p>© 2025 FBI - Unidade de Crimes Especiais. Todos os direitos reservados.</p>
     </footer>
 
 </body>
