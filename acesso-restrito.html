@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Restrito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0A1D2A;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0A1D2A;
+            color: white;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #0A1D2A;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Acesso Restrito - Responda às Perguntas</h1>
+    </header>
+
+    <main>
+        <p>Para acessar a solução do caso, responda corretamente às perguntas abaixo.</p>
+
+        <form id="formDesafio">
+            <label for="pergunta1">1. Onde Carlos Delgado foi encontrado morto?</label>
+            <input type="text" id="pergunta1" required>
+
+            <label for="pergunta2">2. Quem tinha um álibi mais fraco?</label>
+            <input type="text" id="pergunta2" required>
+
+            <label for="pergunta3">3. Qual suspeito teve um histórico de desavenças com Carlos?</label>
+            <input type="text" id="pergunta3" required>
+
+            <button type="button" onclick="verificarRespostas()">Enviar</button>
+        </form>
+
+        <p id="mensagem"></p>
+    </main>
+
+    <footer>
+        <p>©️ 2025 FBI - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function verificarRespostas() {
+            let resposta1 = document.getElementById("pergunta1").value.trim().toLowerCase();
+            let resposta2 = document.getElementById("pergunta2").value.trim().toLowerCase();
+            let resposta3 = document.getElementById("pergunta3").value.trim().toLowerCase();
+
+            if (resposta1 === "escritório" && resposta2 === "rafael antunes" && resposta3 === "rafael antunes") {
+                window.location.href = "solucao.html"; // Redireciona para a solução
+            } else {
+                document.getElementById("mensagem").innerHTML = "Respostas incorretas, tente novamente.";
+            }
+        }
+    </script>
+
+</body>
+</html>

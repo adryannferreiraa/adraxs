@@ -3,159 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FBI - Suspeitos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Suspeitos - Caso Carlos Delgado</title>
     <style>
-        /* Reset de estilos básicos */
-        body, h1, h2, h3, p, ul {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Estilo geral da página */
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
         }
 
         header {
-            background-color: #0a1d2a;
+            background-color: #0A1D2A;
             color: white;
             padding: 20px;
             text-align: center;
         }
 
-        .logo {
-            width: 150px;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-top: 10px;
-        }
-
-        .investigador {
-            font-size: 18px;
-            font-style: italic;
-            margin-top: 5px;
-        }
-
-        /* Menu de navegação */
-        nav {
-            background-color: #0a1d2a;
-            padding: 10px;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #d1d1d1;
-        }
-
-        /* Main Content */
         main {
             padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        h2 {
+        footer {
             text-align: center;
-            margin-bottom: 20px;
-            font-size: 30px;
+            padding: 10px;
+            background-color: #0A1D2A;
+            color: white;
         }
 
         .suspeito {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .suspeito img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
         }
 
         .suspeito h3 {
-            font-size: 24px;
-            margin-bottom: 5px;
+            margin: 5px 0;
         }
 
         .suspeito p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0a1d2a;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-size: 14px;
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="fbi-Logo-.png" alt="FBI Logo" class="logo">
-        <h1>FBI - SUSPEITOS DO CASO</h1>
-        <p class="investigador">Investigador Cruzariolli</p>
+        <h1>Suspeitos do Caso Carlos Delgado</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="home.html">Início</a></li>
-            <li><a href="#" onclick="window.print()">Imprimir Relatório</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <h2>Lista de Suspeitos</h2>
-        
         <div class="suspeito">
-            <img src="imagens/rafael.jpg" alt="Rafael Antunes">
-            <div>
-                <h3>Rafael Antunes</h3>
-                <p>Empresário - Condenado por lavagem de dinheiro</p>
-            </div>
+            <h3>Rafael Antunes</h3>
+            <p><strong>Idade:</strong> 42 anos</p>
+            <p><strong>Motivação:</strong> Desavenças comerciais com Carlos.</p>
+            <p><strong>Álibi:</strong> Afirma estar em casa, mas há contradições.</p>
         </div>
 
         <div class="suspeito">
-            <img src="imagens/gustavo.jpg" alt="Gustavo Neves">
-            <div>
-                <h3>Gustavo Neves</h3>
-                <p>Consultor Financeiro - Condenado por homicídio</p>
-            </div>
+            <h3>Gustavo Neves</h3>
+            <p><strong>Idade:</strong> 39 anos</p>
+            <p><strong>Motivação:</strong> Tinha medo de ser demitido por questões legais.</p>
+            <p><strong>Álibi:</strong> Diz estar em uma reunião, sem confirmação de testemunhas.</p>
+        </div>
+
+        <div class="suspeito">
+            <h3>Mariana Soares</h3>
+            <p><strong>Idade:</strong> 36 anos</p>
+            <p><strong>Motivação:</strong> Quer uma promoção, mas não foi valorizada.</p>
+            <p><strong>Álibi:</strong> Afirma estar em uma festa de empresa, mas não é confirmada.</p>
+        </div>
+
+        <div class="suspeito">
+            <h3>João Ricardo</h3>
+            <p><strong>Idade:</strong> 45 anos</p>
+            <p><strong>Motivação:</strong> Permitiu a entrada de uma pessoa desconhecida no edifício.</p>
+            <p><strong>Álibi:</strong> Não forneceu detalhes claros de sua ronda.</p>
         </div>
     </main>
 
     <footer>
-        <p>© 2025 FBI - Unidade de Crimes Especiais.</p>
+        <p>©️ 2025 FBI - Todos os direitos reservados.</p>
     </footer>
 
 </body>
