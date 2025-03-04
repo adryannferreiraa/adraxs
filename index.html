@@ -3,68 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O'Castelo</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Supondo que você tenha um arquivo CSS -->
-    <meta name="description" content="O'Castelo, a sua fonte de informação.">
-    <link rel="icon" href="castelao-logo.ico" type="image/x-icon">
-    <meta name="keywords" content="Castelão, Santa Cruz de Monte Castelo, eleições 2024">
-
-
+    <title>FBI - Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <!-- Substituindo o título pelo logo -->
-            <a href="#"><img src="castelao logo 2.png" alt="Castelão" class="logo"></a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="politica.html">Política</a></li>
-                    <li><a href="mundo.html">Mundo</a></li>
-                    <!-- Removendo as opções Esportes e Cultura -->
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <section class="featured">
-                <h2>Notícias em Destaque</h2>
-                <div class="news-grid">
-                    <article class="news-item">
-                        <img src="scmc 1.png" alt="Notícia 1">
-                        <div class="news-content">
-                            <h3>Eleições 2024</h3>
-                            <p>Faltam menos de 1 mês para as eleições em Santa Cruz de Monte Castelo. Veja abaixo os candidatos a Prefeito e Vereador.</p>
-                            <a href="ocastelo.html" class="read-more">Leia mais</a>
-                        </div>
-                    </article>
-                    <article class="news-item">
-                        <img src="encontro.png" alt="Notícia 2">
-                        <div class="news-content">
-                            <h3>Encontro Politico</h3>
-                            <p>Candidatos a prefeitura de Santa Cruz de Monte Castelo marcam Encontro Politico no mesmo dia e horario.</p>
-                            <a href="leiamais.html" class="read-more">Leia mais</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="latest-news">
-                <h2>Últimas Notícias</h2>
-                <div class="news-list">
-                    <article class="news-item">
-                        <h3>Willian PL</h3>
-                        <p>Conheça Willian Cezar Viega.</p>
-                        <a href="willian.html" class="read-more">Leia mais</a>
-                    </article>
-                    <article class="news-item">
-                        <h3>Manutenção</h3>
-                        <p>Resumo da última notícia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis vehicula dui, non fermentum elit.</p>
-                        <a href="#" class="read-more">Leia mais</a>
-                    </article>
-                </div>
-            </section>
-        </div>
-    </main>
+
+    <div class="login-container">
+        <img src="fbi-Logo-.png" alt="FBI Logo" class="logo">
+        <h2>FBI - ACESSO RESTRITO</h2>
+        <input type="text" id="usuario" placeholder="Usuário">
+        <input type="password" id="senha" placeholder="Senha">
+        <button onclick="validarLogin()">Entrar</button>
+        <p id="erro"></p>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
