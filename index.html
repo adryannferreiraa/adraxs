@@ -87,6 +87,27 @@
             font-size: 14px;
         }
     </style>
+    <script>
+        // Função de validação do login
+        function validarLogin() {
+            var usuario = document.getElementById('usuario').value;
+            var senha = document.getElementById('senha').value;
+            var erro = document.getElementById('erro');
+
+            // Definindo o usuário e senha corretos
+            var usuarioCorreto = 'cruzariolli';
+            var senhaCorreta = '0774';
+
+            // Verificando se o usuário e senha estão corretos
+            if (usuario === usuarioCorreto && senha === senhaCorreta) {
+                // Redirecionando para home.html se estiver correto
+                window.location.href = 'home.html';
+            } else {
+                // Exibindo mensagem de erro se estiver errado
+                erro.textContent = 'Usuário ou senha incorretos.';
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -99,7 +120,6 @@
         <p id="erro"></p>
     </div>
 
-    <script src="script.js"></script>
-
 </body>
 </html>
+
