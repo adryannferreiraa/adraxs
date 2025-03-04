@@ -29,9 +29,12 @@ body {
 
 /* Estilo da logo */
 .logo {
-    width: 150px; /* Ajuste o tamanho da imagem para algo mais profissional */
+    width: 120px;  /* Ajustando o tamanho da logo */
     height: auto;
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Estilo do título */
@@ -76,4 +79,3 @@ button:hover {
     color: red;
     font-size: 14px;
 }
-
